@@ -4,6 +4,6 @@ enum DataState<T> {
 
     case response(uiComponent: UIComponent)
     case data(data: T)
-    case loading(loading: ProgressState)
+    case loading(progressState: ProgressState)
 
 }

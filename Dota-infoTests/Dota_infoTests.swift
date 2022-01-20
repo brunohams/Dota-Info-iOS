@@ -23,15 +23,20 @@ class Dota_infoTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let service = HeroServiceImpl()
         let getHeroes = GetHeroes(heroService: service)
-        let response: DataState = getHeroes.execute()
 
-        switch (response) {
-            case .response(response: let response):
-                print("is a response: \(response.uiComponent)")
-            case .data(data: let data):
-                print("is a data: \(data.data)")
-            case .loading(loading: let loading):
-                    print("is a loading: \(loading.state)")
+        getHeroes.execute().subscribe { event in
+
+            guard let state: DataState<[Hero]> = event.element else { return }
+
+            switch (state) {
+                case .response(uiComponent: let uiComponent):
+                    print("Response: \(uiComponent)")
+                case .data(data: let data):
+                    print("Data: \(data)")
+                case .loading(progressState: let progressState):
+                    print("Loading: \(progressState)")
+            }
+
         }
 
 

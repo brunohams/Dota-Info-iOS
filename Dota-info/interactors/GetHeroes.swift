@@ -1,4 +1,5 @@
 import Foundation
+import RxSwift
 
 class GetHeroes {
 
@@ -8,13 +9,28 @@ class GetHeroes {
         self.heroService = heroService
     }
 
-    func execute() -> DataState<[Hero]> {
-        let listOfHeroes = [Hero]()
-//        let dataState = DataState<[Hero]>.loading(loading: ProgressState.idle)
-        let dataState = DataState<[Hero]>.response(uiComponent: UIComponent.Dialog(title: "Erro", description: "deu erro"))
-//        let dataState = DataState<[Hero]>.data(data: listOfHeroes)
+    func execute() -> Observable<DataState<[Hero]>> {
+        return Observable<DataState<[Hero]>>.create { observer in
+            let listOfHeroes = [Hero]()
 
-        return dataState
+            let dataStateLoading = DataState<[Hero]>.loading(progressState: ProgressState.loading)
+            observer.on(.next(dataStateLoading))
+
+            sleep(3)
+
+            let dataStateErro = DataState<[Hero]>.response(uiComponent: UIComponent.dialog(uiComponent: UIComponent.Dialog(title: "Erro", description: "deu erro")))
+            let dataStateData = DataState<[Hero]>.data(data: listOfHeroes)
+            let dataStateIdle = DataState<[Hero]>.loading(progressState: ProgressState.idle)
+
+            observer.on(.next(dataStateErro))
+            observer.on(.next(dataStateData))
+            observer.on(.next(dataStateIdle))
+            sleep(3)
+            observer.on(.next(dataStateLoading))
+
+            observer.onCompleted()
+            return Disposables.create()
+        }
     }
 
 }

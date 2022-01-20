@@ -1,17 +1,22 @@
-//
-//  Dota_infoApp.swift
-//  Dota-info
-//
-//  Created by PremierSoft on 20/01/22.
-//
-
 import SwiftUI
 
 @main
 struct Dota_infoApp: App {
+
+    // Inject these
+    var heroListViewModel: HeroListViewModel
+
+    init() {
+        // Inject these
+        let heroService = HeroServiceImpl()
+        let getHeroes = GetHeroes(heroService: HeroServiceImpl())
+        let logger = Logger.createDebugLogger(tag: "HeroList")
+        heroListViewModel = HeroListViewModel(getHeroes: getHeroes, logger: logger)
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HeroListView(viewModel: heroListViewModel)
         }
     }
 }
