@@ -16,7 +16,7 @@ class GetHeroes {
 
                 let loading = DataState<[Hero]>.loading(progressState: ProgressState.loading)
                 let idle = DataState<[Hero]>.loading(progressState: ProgressState.idle)
-                observer.on(.next(loading)) // emit start loading
+                observer.on(.next(loading)) // -> Emit Loading
 
                 do {
                     var heroes: [Hero] = []
@@ -24,14 +24,14 @@ class GetHeroes {
                     heroes = try self.heroService.getHeroStats()
 
                     let dataState = DataState<[Hero]>.data(data: heroes)
-                    observer.on(.next(dataState)) // Emit data
+                    observer.on(.next(dataState)) // -> Emit Data
                 } catch {
                     let errorDialog = UIComponent.Dialog(title: "Erro ao converter dados", description: error.localizedDescription)
                     let dataStateError = DataState<[Hero]>.response(uiComponent: errorDialog)
-                    observer.on(.next(dataStateError)) // Emit error
+                    observer.on(.next(dataStateError)) // -> Emit Error
                 }
 
-                observer.on(.next(idle)) // Emit idle loading
+                observer.on(.next(idle)) // -> Emit Idle
                 observer.onCompleted()
             })
 
