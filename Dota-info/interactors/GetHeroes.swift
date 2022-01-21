@@ -21,7 +21,7 @@ class GetHeroes {
                 do {
                     var heroes: [Hero] = []
 
-                    heroes = try! self.heroService.getHeroStats()
+                    heroes = try self.heroService.getHeroStats()
 
                     let dataState = DataState<[Hero]>.data(data: heroes)
                     observer.on(.next(dataState)) // Emit data
