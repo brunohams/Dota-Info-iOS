@@ -1,8 +1,10 @@
 import Foundation
 
-enum UIComponent {
+class UIComponent {
 
-    class Dialog {
+    private init() {}
+
+    class Dialog: UIComponent {
         let title: String
         let description: String
         init(title: String, description: String) {
@@ -11,14 +13,15 @@ enum UIComponent {
         }
     }
 
-    class None {
+    class None: UIComponent {
         let message: String
         init(message: String) {
             self.message = message
         }
     }
-
-    case dialog(uiComponent: Dialog)
-    case none(uiComponent: None)
+//    case dialog(uiComponent: Dialog)
+//    case none(uiComponent: None)
 
 }
+
+

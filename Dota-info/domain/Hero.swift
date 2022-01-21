@@ -1,6 +1,6 @@
 import Foundation
 
-struct Hero {
+struct Hero: Identifiable {
     let id: Int
     let localizedName: String
     let primaryAtribute: HeroAttribute

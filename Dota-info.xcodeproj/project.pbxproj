@@ -20,22 +20,24 @@
 		BE6AA09F080E260E05544A1B /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */; };
 		BE6AA18EC56C98EC4CD22D35 /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA0FA91D613CF0C6F6FF5 /* HeroService.swift */; };
 		BE6AA1A3E191FC6DBD40914E /* HeroAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B4D7637B5CC4A07C01 /* HeroAttribute.swift */; };
-		BE6AA21D9968E2B2227D9C88 /* HeroListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAD0FD823D56A38A5FE56 /* HeroListState.swift */; };
 		BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */; };
 		BE6AA2ADCE0C4D153C417729 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2178431A1EE66FC6C9B /* Logger.swift */; };
+		BE6AA3E3F639E6999E5298EC /* HeroListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE3C85CEDB31F3B79D76 /* HeroListState.swift */; };
 		BE6AA40E82839F5D3259895E /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2360A517CC858FFDCE8 /* DataState.swift */; };
 		BE6AA4B697BBF8C3F65267E9 /* HeroServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3152039C7A799BEED59 /* HeroServiceImpl.swift */; };
-		BE6AA51C95224FB7768C0B20 /* HeroListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAC4625B0F79E4EC51DEE /* HeroListViewModel.swift */; };
 		BE6AA5A786C4F13590275867 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA68A7FB41B92037E06B /* Hero.swift */; };
+		BE6AA5CEEAF5A355EEE32149 /* HeroRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA39F45515A8EFBD77F64 /* HeroRow.swift */; };
 		BE6AA64E6421D1443AFC871F /* HeroAttackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA09B3E78E5B3AB905AFC /* HeroAttackType.swift */; };
 		BE6AA6D95EF2160014B942DA /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2360A517CC858FFDCE8 /* DataState.swift */; };
 		BE6AA6ED464EA82FD90F2A3A /* HeroRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */; };
-		BE6AA72881A66A8A66039159 /* HeroListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA90D6BE72CC11616C86C /* HeroListView.swift */; };
+		BE6AA710B688CFDF930BE7D8 /* HeroListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE170743D99019238163 /* HeroListView.swift */; };
+		BE6AA7136197175C4B19F1C7 /* HeroListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA5F314E1BC0473CEABBA /* HeroListViewModel.swift */; };
 		BE6AA829C21209D174725F7E /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA0FA91D613CF0C6F6FF5 /* HeroService.swift */; };
 		BE6AA8A08CFC8A39BB51636F /* ProgressState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA338F8A4A22FCA8C96B7 /* ProgressState.swift */; };
 		BE6AA8B275C010E8781560FD /* HeroDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA106C0AAE549899D9DF0 /* HeroDto.swift */; };
 		BE6AA8E2067371EE0F3861B1 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA68A7FB41B92037E06B /* Hero.swift */; };
 		BE6AAA44EC36A4DA038BCD72 /* GetHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA567E4140471F33A496B /* GetHeroes.swift */; };
+		BE6AABA52EB97A9488829F3E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA0B3EAAF3687DAE714E8 /* ActivityIndicator.swift */; };
 		BE6AADDFC93479F222CAD8EF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BE6AA2968041C6B18F2E64F9 /* README.md */; };
 		BE6AAE295AF422CC4A7BDB0D /* HeroRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */; };
 		BE6AAE6DDF1A3CD24CA8FA5B /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */; };
@@ -80,6 +82,7 @@
 		853EADD3279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota_infoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9EBE67E2E199EB8A577DDF08 /* Pods-Dota-info-Dota-infoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dota-info-Dota-infoUITests.release.xcconfig"; path = "Target Support Files/Pods-Dota-info-Dota-infoUITests/Pods-Dota-info-Dota-infoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BE6AA09B3E78E5B3AB905AFC /* HeroAttackType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAttackType.swift; sourceTree = "<group>"; };
+		BE6AA0B3EAAF3687DAE714E8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		BE6AA0FA91D613CF0C6F6FF5 /* HeroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
 		BE6AA106C0AAE549899D9DF0 /* HeroDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDto.swift; sourceTree = "<group>"; };
 		BE6AA2178431A1EE66FC6C9B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -87,14 +90,15 @@
 		BE6AA2968041C6B18F2E64F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.me; path = README.md; sourceTree = "<group>"; };
 		BE6AA3152039C7A799BEED59 /* HeroServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceImpl.swift; sourceTree = "<group>"; };
 		BE6AA338F8A4A22FCA8C96B7 /* ProgressState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressState.swift; sourceTree = "<group>"; };
+		BE6AA39F45515A8EFBD77F64 /* HeroRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroRow.swift; sourceTree = "<group>"; };
 		BE6AA567E4140471F33A496B /* GetHeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHeroes.swift; sourceTree = "<group>"; };
+		BE6AA5F314E1BC0473CEABBA /* HeroListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListViewModel.swift; sourceTree = "<group>"; };
 		BE6AA7B4D7637B5CC4A07C01 /* HeroAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAttribute.swift; sourceTree = "<group>"; };
 		BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroRole.swift; sourceTree = "<group>"; };
-		BE6AA90D6BE72CC11616C86C /* HeroListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListView.swift; sourceTree = "<group>"; };
 		BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dota_infoApp.swift; sourceTree = "<group>"; };
 		BE6AAA68A7FB41B92037E06B /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
-		BE6AAC4625B0F79E4EC51DEE /* HeroListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListViewModel.swift; sourceTree = "<group>"; };
-		BE6AAD0FD823D56A38A5FE56 /* HeroListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListState.swift; sourceTree = "<group>"; };
+		BE6AAE170743D99019238163 /* HeroListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListView.swift; sourceTree = "<group>"; };
+		BE6AAE3C85CEDB31F3B79D76 /* HeroListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListState.swift; sourceTree = "<group>"; };
 		BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIComponent.swift; sourceTree = "<group>"; };
 		EBA57004CE3043B976AB0E17 /* Pods-Dota-info-Dota-infoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dota-info-Dota-infoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Dota-info-Dota-infoUITests/Pods-Dota-info-Dota-infoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,11 +230,18 @@
 			isa = PBXGroup;
 			children = (
 				BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */,
-				BE6AA90D6BE72CC11616C86C /* HeroListView.swift */,
-				BE6AAC4625B0F79E4EC51DEE /* HeroListViewModel.swift */,
-				BE6AAD0FD823D56A38A5FE56 /* HeroListState.swift */,
+				BE6AA703D6423782A1C0F0ED /* hero */,
+				BE6AA5C4F7E3C3CEF2BCE649 /* components */,
 			);
 			path = presentation;
+			sourceTree = "<group>";
+		};
+		BE6AA5C4F7E3C3CEF2BCE649 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AA0B3EAAF3687DAE714E8 /* ActivityIndicator.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		BE6AA6B06513612C071EFE29 /* domain */ = {
@@ -242,6 +253,17 @@
 				BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */,
 			);
 			path = domain;
+			sourceTree = "<group>";
+		};
+		BE6AA703D6423782A1C0F0ED /* hero */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AAE170743D99019238163 /* HeroListView.swift */,
+				BE6AAE3C85CEDB31F3B79D76 /* HeroListState.swift */,
+				BE6AA5F314E1BC0473CEABBA /* HeroListViewModel.swift */,
+				BE6AA39F45515A8EFBD77F64 /* HeroRow.swift */,
+			);
+			path = hero;
 			sourceTree = "<group>";
 		};
 		BE6AA7BDAC840FE837F5444B /* util */ = {
@@ -546,7 +568,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */,
-				BE6AA72881A66A8A66039159 /* HeroListView.swift in Sources */,
 				BE6AA6D95EF2160014B942DA /* DataState.swift in Sources */,
 				BE6AA09F080E260E05544A1B /* UIComponent.swift in Sources */,
 				BE6AA041EBC191E4C7F8479F /* ProgressState.swift in Sources */,
@@ -558,9 +579,12 @@
 				BE6AA6ED464EA82FD90F2A3A /* HeroRole.swift in Sources */,
 				BE6AAA44EC36A4DA038BCD72 /* GetHeroes.swift in Sources */,
 				BE6AA09DDB5A945F9E4B46F8 /* HeroServiceImpl.swift in Sources */,
-				BE6AA51C95224FB7768C0B20 /* HeroListViewModel.swift in Sources */,
 				BE6AA2ADCE0C4D153C417729 /* Logger.swift in Sources */,
-				BE6AA21D9968E2B2227D9C88 /* HeroListState.swift in Sources */,
+				BE6AA710B688CFDF930BE7D8 /* HeroListView.swift in Sources */,
+				BE6AA3E3F639E6999E5298EC /* HeroListState.swift in Sources */,
+				BE6AA7136197175C4B19F1C7 /* HeroListViewModel.swift in Sources */,
+				BE6AABA52EB97A9488829F3E /* ActivityIndicator.swift in Sources */,
+				BE6AA5CEEAF5A355EEE32149 /* HeroRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
