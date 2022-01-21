@@ -16,34 +16,41 @@
 		853EADD4279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EADD3279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift */; };
 		BE6AA041EBC191E4C7F8479F /* ProgressState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA338F8A4A22FCA8C96B7 /* ProgressState.swift */; };
 		BE6AA0704C3161BD1B1E6010 /* HeroAttackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA09B3E78E5B3AB905AFC /* HeroAttackType.swift */; };
-		BE6AA09DDB5A945F9E4B46F8 /* HeroServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3152039C7A799BEED59 /* HeroServiceImpl.swift */; };
 		BE6AA09F080E260E05544A1B /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */; };
-		BE6AA18EC56C98EC4CD22D35 /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA0FA91D613CF0C6F6FF5 /* HeroService.swift */; };
+		BE6AA0B0BEA5AB39F4315447 /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA8AC44CBAB4D6945CED4 /* HeroService.swift */; };
+		BE6AA1339AEDA067B8C484E3 /* HeroDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3BF87EE44580A9C3FD4 /* HeroDto.swift */; };
 		BE6AA1A3E191FC6DBD40914E /* HeroAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B4D7637B5CC4A07C01 /* HeroAttribute.swift */; };
+		BE6AA22370E18B55AC9742E1 /* HeroServiceFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE1E50149B5D2E9BCD33 /* HeroServiceFake.swift */; };
 		BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */; };
 		BE6AA2ADCE0C4D153C417729 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2178431A1EE66FC6C9B /* Logger.swift */; };
 		BE6AA3E3F639E6999E5298EC /* HeroListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE3C85CEDB31F3B79D76 /* HeroListState.swift */; };
 		BE6AA40E82839F5D3259895E /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2360A517CC858FFDCE8 /* DataState.swift */; };
-		BE6AA4B697BBF8C3F65267E9 /* HeroServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3152039C7A799BEED59 /* HeroServiceImpl.swift */; };
 		BE6AA5A786C4F13590275867 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA68A7FB41B92037E06B /* Hero.swift */; };
 		BE6AA5CEEAF5A355EEE32149 /* HeroRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA39F45515A8EFBD77F64 /* HeroRow.swift */; };
 		BE6AA64E6421D1443AFC871F /* HeroAttackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA09B3E78E5B3AB905AFC /* HeroAttackType.swift */; };
 		BE6AA6D95EF2160014B942DA /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2360A517CC858FFDCE8 /* DataState.swift */; };
 		BE6AA6ED464EA82FD90F2A3A /* HeroRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */; };
+		BE6AA70E036FBC712384DA8D /* HeroDataValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA5FBABDCEC0DB5EAB03A /* HeroDataValid.swift */; };
 		BE6AA710B688CFDF930BE7D8 /* HeroListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE170743D99019238163 /* HeroListView.swift */; };
 		BE6AA7136197175C4B19F1C7 /* HeroListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA5F314E1BC0473CEABBA /* HeroListViewModel.swift */; };
-		BE6AA829C21209D174725F7E /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA0FA91D613CF0C6F6FF5 /* HeroService.swift */; };
+		BE6AA7644184845A8B8B5C5F /* HeroDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3BF87EE44580A9C3FD4 /* HeroDto.swift */; };
 		BE6AA8A08CFC8A39BB51636F /* ProgressState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA338F8A4A22FCA8C96B7 /* ProgressState.swift */; };
-		BE6AA8B275C010E8781560FD /* HeroDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA106C0AAE549899D9DF0 /* HeroDto.swift */; };
+		BE6AA8B944CCEAE9C30897D9 /* HeroServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2551C15B4C4B84FD898 /* HeroServiceImpl.swift */; };
+		BE6AA8C406C2CB09C265CF99 /* HeroServiceFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE1E50149B5D2E9BCD33 /* HeroServiceFake.swift */; };
 		BE6AA8E2067371EE0F3861B1 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA68A7FB41B92037E06B /* Hero.swift */; };
 		BE6AAA44EC36A4DA038BCD72 /* GetHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA567E4140471F33A496B /* GetHeroes.swift */; };
+		BE6AAAAE9C6364E70DDBEE5F /* HeroDataMalformed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA9E2BC6B1A1F74525B5D /* HeroDataMalformed.swift */; };
+		BE6AAB52C8C552A6956419EC /* HeroServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2551C15B4C4B84FD898 /* HeroServiceImpl.swift */; };
 		BE6AABA52EB97A9488829F3E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA0B3EAAF3687DAE714E8 /* ActivityIndicator.swift */; };
+		BE6AAC2720B279385372C8EB /* HeroServiceResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3ACD03724B4F7E0813B /* HeroServiceResponseType.swift */; };
 		BE6AADDFC93479F222CAD8EF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BE6AA2968041C6B18F2E64F9 /* README.md */; };
+		BE6AADE349FB39E9FA0187E9 /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA8AC44CBAB4D6945CED4 /* HeroService.swift */; };
+		BE6AADE48FF56324212572F6 /* HeroDataEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAB639EAC79AB2A7E85AA /* HeroDataEmpty.swift */; };
 		BE6AAE295AF422CC4A7BDB0D /* HeroRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */; };
 		BE6AAE6DDF1A3CD24CA8FA5B /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */; };
 		BE6AAEE711EC81F3570E9273 /* HeroAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B4D7637B5CC4A07C01 /* HeroAttribute.swift */; };
-		BE6AAF3CEE63D0E3406800AC /* HeroDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA106C0AAE549899D9DF0 /* HeroDto.swift */; };
 		BE6AAF802A63DB5760BB2766 /* GetHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA567E4140471F33A496B /* GetHeroes.swift */; };
+		BE6AAFB068247C1BD7353EAC /* HeroServiceResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3ACD03724B4F7E0813B /* HeroServiceResponseType.swift */; };
 		D9FA2EA2E17B7573AB8C549A /* Pods_Dota_info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB1C94DC67A0C0E69437EC9 /* Pods_Dota_info.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,21 +90,26 @@
 		9EBE67E2E199EB8A577DDF08 /* Pods-Dota-info-Dota-infoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dota-info-Dota-infoUITests.release.xcconfig"; path = "Target Support Files/Pods-Dota-info-Dota-infoUITests/Pods-Dota-info-Dota-infoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BE6AA09B3E78E5B3AB905AFC /* HeroAttackType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAttackType.swift; sourceTree = "<group>"; };
 		BE6AA0B3EAAF3687DAE714E8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		BE6AA0FA91D613CF0C6F6FF5 /* HeroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
-		BE6AA106C0AAE549899D9DF0 /* HeroDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDto.swift; sourceTree = "<group>"; };
 		BE6AA2178431A1EE66FC6C9B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		BE6AA2360A517CC858FFDCE8 /* DataState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
+		BE6AA2551C15B4C4B84FD898 /* HeroServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceImpl.swift; sourceTree = "<group>"; };
 		BE6AA2968041C6B18F2E64F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.me; path = README.md; sourceTree = "<group>"; };
-		BE6AA3152039C7A799BEED59 /* HeroServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceImpl.swift; sourceTree = "<group>"; };
 		BE6AA338F8A4A22FCA8C96B7 /* ProgressState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressState.swift; sourceTree = "<group>"; };
 		BE6AA39F45515A8EFBD77F64 /* HeroRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroRow.swift; sourceTree = "<group>"; };
+		BE6AA3ACD03724B4F7E0813B /* HeroServiceResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceResponseType.swift; sourceTree = "<group>"; };
+		BE6AA3BF87EE44580A9C3FD4 /* HeroDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDto.swift; sourceTree = "<group>"; };
 		BE6AA567E4140471F33A496B /* GetHeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHeroes.swift; sourceTree = "<group>"; };
 		BE6AA5F314E1BC0473CEABBA /* HeroListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListViewModel.swift; sourceTree = "<group>"; };
+		BE6AA5FBABDCEC0DB5EAB03A /* HeroDataValid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDataValid.swift; sourceTree = "<group>"; };
 		BE6AA7B4D7637B5CC4A07C01 /* HeroAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAttribute.swift; sourceTree = "<group>"; };
 		BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroRole.swift; sourceTree = "<group>"; };
+		BE6AA8AC44CBAB4D6945CED4 /* HeroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
+		BE6AA9E2BC6B1A1F74525B5D /* HeroDataMalformed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDataMalformed.swift; sourceTree = "<group>"; };
 		BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dota_infoApp.swift; sourceTree = "<group>"; };
 		BE6AAA68A7FB41B92037E06B /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		BE6AAB639EAC79AB2A7E85AA /* HeroDataEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDataEmpty.swift; sourceTree = "<group>"; };
 		BE6AAE170743D99019238163 /* HeroListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListView.swift; sourceTree = "<group>"; };
+		BE6AAE1E50149B5D2E9BCD33 /* HeroServiceFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceFake.swift; sourceTree = "<group>"; };
 		BE6AAE3C85CEDB31F3B79D76 /* HeroListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListState.swift; sourceTree = "<group>"; };
 		BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIComponent.swift; sourceTree = "<group>"; };
 		EBA57004CE3043B976AB0E17 /* Pods-Dota-info-Dota-infoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dota-info-Dota-infoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Dota-info-Dota-infoUITests/Pods-Dota-info-Dota-infoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +200,7 @@
 				BE6AABD9CC21D5EFC0EED094 /* datasource */,
 				BE6AA26D6F1B482E141C7DFA /* presentation */,
 				BE6AA047A02E3EA9F8DC7D3D /* core */,
+				BE6AAB6B227DBDFA020A8433 /* datasource-test */,
 			);
 			path = "Dota-info";
 			sourceTree = "<group>";
@@ -244,6 +257,16 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		BE6AA65C6950A9BEA44F8862 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AAB639EAC79AB2A7E85AA /* HeroDataEmpty.swift */,
+				BE6AA5FBABDCEC0DB5EAB03A /* HeroDataValid.swift */,
+				BE6AA9E2BC6B1A1F74525B5D /* HeroDataMalformed.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		BE6AA6B06513612C071EFE29 /* domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +297,16 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		BE6AA9A0EF48772E2D0CC39B /* hero */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AA8AC44CBAB4D6945CED4 /* HeroService.swift */,
+				BE6AA3BF87EE44580A9C3FD4 /* HeroDto.swift */,
+				BE6AA2551C15B4C4B84FD898 /* HeroServiceImpl.swift */,
+			);
+			path = hero;
+			sourceTree = "<group>";
+		};
 		BE6AAA5A53785D89E9173C3C /* domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,9 +320,7 @@
 		BE6AAAAE650D6D773C3AC92B /* network */ = {
 			isa = PBXGroup;
 			children = (
-				BE6AA0FA91D613CF0C6F6FF5 /* HeroService.swift */,
-				BE6AA106C0AAE549899D9DF0 /* HeroDto.swift */,
-				BE6AA3152039C7A799BEED59 /* HeroServiceImpl.swift */,
+				BE6AA9A0EF48772E2D0CC39B /* hero */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -302,12 +333,30 @@
 			path = interactors;
 			sourceTree = "<group>";
 		};
+		BE6AAB6B227DBDFA020A8433 /* datasource-test */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AAC66B4A55E8B3D213D7E /* network */,
+			);
+			path = "datasource-test";
+			sourceTree = "<group>";
+		};
 		BE6AABD9CC21D5EFC0EED094 /* datasource */ = {
 			isa = PBXGroup;
 			children = (
 				BE6AAAAE650D6D773C3AC92B /* network */,
 			);
 			path = datasource;
+			sourceTree = "<group>";
+		};
+		BE6AAC66B4A55E8B3D213D7E /* network */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AA65C6950A9BEA44F8862 /* data */,
+				BE6AAE1E50149B5D2E9BCD33 /* HeroServiceFake.swift */,
+				BE6AA3ACD03724B4F7E0813B /* HeroServiceResponseType.swift */,
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,20 +620,25 @@
 				BE6AA6D95EF2160014B942DA /* DataState.swift in Sources */,
 				BE6AA09F080E260E05544A1B /* UIComponent.swift in Sources */,
 				BE6AA041EBC191E4C7F8479F /* ProgressState.swift in Sources */,
-				BE6AA829C21209D174725F7E /* HeroService.swift in Sources */,
 				BE6AA8E2067371EE0F3861B1 /* Hero.swift in Sources */,
-				BE6AA8B275C010E8781560FD /* HeroDto.swift in Sources */,
 				BE6AA1A3E191FC6DBD40914E /* HeroAttribute.swift in Sources */,
 				BE6AA64E6421D1443AFC871F /* HeroAttackType.swift in Sources */,
 				BE6AA6ED464EA82FD90F2A3A /* HeroRole.swift in Sources */,
 				BE6AAA44EC36A4DA038BCD72 /* GetHeroes.swift in Sources */,
-				BE6AA09DDB5A945F9E4B46F8 /* HeroServiceImpl.swift in Sources */,
 				BE6AA2ADCE0C4D153C417729 /* Logger.swift in Sources */,
 				BE6AA710B688CFDF930BE7D8 /* HeroListView.swift in Sources */,
 				BE6AA3E3F639E6999E5298EC /* HeroListState.swift in Sources */,
 				BE6AA7136197175C4B19F1C7 /* HeroListViewModel.swift in Sources */,
 				BE6AABA52EB97A9488829F3E /* ActivityIndicator.swift in Sources */,
 				BE6AA5CEEAF5A355EEE32149 /* HeroRow.swift in Sources */,
+				BE6AADE48FF56324212572F6 /* HeroDataEmpty.swift in Sources */,
+				BE6AA70E036FBC712384DA8D /* HeroDataValid.swift in Sources */,
+				BE6AAAAE9C6364E70DDBEE5F /* HeroDataMalformed.swift in Sources */,
+				BE6AA22370E18B55AC9742E1 /* HeroServiceFake.swift in Sources */,
+				BE6AAFB068247C1BD7353EAC /* HeroServiceResponseType.swift in Sources */,
+				BE6AA0B0BEA5AB39F4315447 /* HeroService.swift in Sources */,
+				BE6AA7644184845A8B8B5C5F /* HeroDto.swift in Sources */,
+				BE6AAB52C8C552A6956419EC /* HeroServiceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,9 +648,6 @@
 			files = (
 				853EADC8279992ED00265B7E /* Dota_infoTests.swift in Sources */,
 				BE6AAF802A63DB5760BB2766 /* GetHeroes.swift in Sources */,
-				BE6AA18EC56C98EC4CD22D35 /* HeroService.swift in Sources */,
-				BE6AAF3CEE63D0E3406800AC /* HeroDto.swift in Sources */,
-				BE6AA4B697BBF8C3F65267E9 /* HeroServiceImpl.swift in Sources */,
 				BE6AAEE711EC81F3570E9273 /* HeroAttribute.swift in Sources */,
 				BE6AAE295AF422CC4A7BDB0D /* HeroRole.swift in Sources */,
 				BE6AA0704C3161BD1B1E6010 /* HeroAttackType.swift in Sources */,
@@ -604,6 +655,11 @@
 				BE6AA40E82839F5D3259895E /* DataState.swift in Sources */,
 				BE6AA8A08CFC8A39BB51636F /* ProgressState.swift in Sources */,
 				BE6AAE6DDF1A3CD24CA8FA5B /* UIComponent.swift in Sources */,
+				BE6AA8C406C2CB09C265CF99 /* HeroServiceFake.swift in Sources */,
+				BE6AAC2720B279385372C8EB /* HeroServiceResponseType.swift in Sources */,
+				BE6AADE349FB39E9FA0187E9 /* HeroService.swift in Sources */,
+				BE6AA1339AEDA067B8C484E3 /* HeroDto.swift in Sources */,
+				BE6AA8B944CCEAE9C30897D9 /* HeroServiceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

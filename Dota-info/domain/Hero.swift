@@ -13,7 +13,7 @@ struct Hero: Identifiable {
     let baseMana: Float
     let baseManaRegen: Float?
     let baseArmor: Float
-    let baseMoveRate: Float
+    let baseMoveRate: Int
     let baseAttackMin: Int
     let baseAttackMax: Int
     let baseStr: Int
@@ -24,7 +24,7 @@ struct Hero: Identifiable {
     let intGain: Float // Intelligence gain per lvl
     let attackRange: Int
     let projectileSpeed: Int
-    let attackRate: Float
+    let attackRate: Int
     let moveSpeed: Int
     let turnRate: Float? = 0.0
     let legs: Int // How many legs does this hero have?

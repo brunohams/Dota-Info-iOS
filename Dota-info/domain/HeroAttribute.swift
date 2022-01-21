@@ -27,4 +27,18 @@ enum HeroAttribute {
     case intelligence(Intelligence)
     case unknown(Unknown)
 
+
+    static func getHeroAttribute(fromValue value: String) -> HeroAttribute {
+        switch value {
+            case "agi":
+                return HeroAttribute.agility(HeroAttribute.Agility())
+            case "int":
+                return HeroAttribute.intelligence(HeroAttribute.Intelligence())
+            case "str":
+                return HeroAttribute.strength(HeroAttribute.Strength())
+            default:
+                return HeroAttribute.unknown(HeroAttribute.Unknown())
+        }
+    }
 }
+

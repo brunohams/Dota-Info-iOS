@@ -2,6 +2,6 @@ import Foundation
 
 protocol HeroService {
 
-    func getHeroStats() -> [Hero]
+    func getHeroStats() throws -> [Hero]
 
 }

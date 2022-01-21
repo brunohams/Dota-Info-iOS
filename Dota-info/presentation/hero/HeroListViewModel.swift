@@ -51,7 +51,8 @@ class HeroListViewModel: ObservableObject {
         }
     }
 
-    func updateDataState(data: [Hero]) {
+    func updateDataState(data: [Hero]?) {
+        guard let data = data else { return }
         state.heroes = data
         state = state
     }

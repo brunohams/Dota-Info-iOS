@@ -8,7 +8,7 @@ struct Dota_infoApp: App {
 
     init() {
         // Inject these
-        let heroService = HeroServiceImpl()
+        let heroService = HeroServiceFake.init(responseType: .goodData)
         let getHeroes = GetHeroes(heroService: heroService)
         let logger = Logger.createDebugLogger(tag: "HeroList")
         heroListViewModel = HeroListViewModel(getHeroes: getHeroes, logger: logger)
