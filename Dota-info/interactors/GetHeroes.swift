@@ -11,7 +11,7 @@ class GetHeroes {
 
     func execute() -> Observable<DataState<[Hero]>> {
         return Observable<DataState<[Hero]>>.create { [weak self] observer in
-            DispatchQueue.global(qos: .background).async( execute: {
+            DispatchQueue.global(qos: .background).async {
                 guard let self = self else { return }
 
                 let loading = DataState<[Hero]>.loading(progressState: ProgressState.loading)
@@ -33,11 +33,11 @@ class GetHeroes {
 
                 observer.on(.next(idle)) // -> Emit Idle
                 observer.onCompleted()
-            })
+            }
 
             return Disposables.create()
 
-        }.observeOn(SerialDispatchQueueScheduler(qos: .background))
+        }.observe(on: SerialDispatchQueueScheduler(qos: .background))
     }
 
 }

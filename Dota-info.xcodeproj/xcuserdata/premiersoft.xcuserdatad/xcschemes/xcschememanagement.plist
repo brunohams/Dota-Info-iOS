@@ -28,14 +28,21 @@
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>3</integer>
 		</dict>
 		<key>GetHeroesTests.testWhenCorruptedJsonDataShouldReturnError.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>4</integer>
+		</dict>
+		<key>All in GetHeroesTests.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 	</dict>
 </dict>
