@@ -14,24 +14,40 @@ class GetHeroes {
             DispatchQueue.global(qos: .background).async {
                 guard let self = self else { return }
 
-                let loading = DataState<[Hero]>.loading(progressState: ProgressState.loading)
-                let idle = DataState<[Hero]>.loading(progressState: ProgressState.idle)
-                observer.on(.next(loading)) // -> Emit Loading
+                // EMIT LOADING
+                observer.on(.next(
+                    DataState<[Hero]>.loading(
+                        progressState: ProgressState.loading
+                    )
+                ))
 
                 do {
-                    var heroes: [Hero] = []
-
-                    heroes = try self.heroService.getHeroStats()
-
-                    let dataState = DataState<[Hero]>.data(data: heroes)
-                    observer.on(.next(dataState)) // -> Emit Data
+                    var heroes: [Hero] = try self.heroService.getHeroStats()
+                    // EMIT DATA
+                    observer.on(.next(
+                        DataState<[Hero]>.data(
+                            data: heroes
+                        )
+                    ))
                 } catch {
-                    let errorDialog = UIComponent.Dialog(title: "Erro ao converter dados", description: error.localizedDescription)
-                    let dataStateError = DataState<[Hero]>.response(uiComponent: errorDialog)
-                    observer.on(.next(dataStateError)) // -> Emit Error
+                    // EMIT ERROR
+                    observer.on(.next(
+                        DataState<[Hero]>.response(
+                            uiComponent: UIComponent.Dialog(
+                                title: "Erro ao converter dados",
+                                description: error.localizedDescription
+                            )
+                        )
+                    ))
                 }
 
-                observer.on(.next(idle)) // -> Emit Idle
+                // EMIT IDLE
+                observer.on(.next(
+                    DataState<[Hero]>.loading(
+                        progressState: ProgressState.idle
+                    )
+                ))
+
                 observer.onCompleted()
             }
 
