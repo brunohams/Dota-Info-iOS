@@ -1,59 +1,36 @@
 import Foundation
-import RxSwift
+import Combine
 
 class GetHeroes {
 
-    var heroService: HeroService
+    let heroService: HeroService
+    let logger: Logger
 
-    init (heroService: HeroService) {
+    init (heroService: HeroService, logger: Logger) {
         self.heroService = heroService
+        self.logger = logger
     }
 
-    func execute() -> Observable<DataState<[Hero]>> {
-        return Observable<DataState<[Hero]>>.create { [weak self] observer in
-            DispatchQueue.global(qos: .background).async {
-                guard let self = self else { return }
+    func execute() -> AnyPublisher<DataState<[Hero]>, Never> {
+        let subject = CurrentValueSubject<DataState<[Hero]>, Never>(
+            DataState<[Hero]>.loading(progressState: .loading) // --> Emit Loading
+        )
 
-                // EMIT LOADING
-                observer.on(.next(
-                    DataState<[Hero]>.loading(
-                        progressState: ProgressState.loading
-                    )
-                ))
-
-                do {
-                    var heroes: [Hero] = try self.heroService.getHeroStats()
-                    // EMIT DATA
-                    observer.on(.next(
-                        DataState<[Hero]>.data(
-                            data: heroes
-                        )
-                    ))
-                } catch {
-                    // EMIT ERROR
-                    observer.on(.next(
-                        DataState<[Hero]>.response(
-                            uiComponent: UIComponent.Dialog(
-                                title: "Erro ao converter dados",
-                                description: error.localizedDescription
-                            )
-                        )
-                    ))
-                }
-
-                // EMIT IDLE
-                observer.on(.next(
-                    DataState<[Hero]>.loading(
-                        progressState: ProgressState.idle
-                    )
-                ))
-
-                observer.onCompleted()
+        DispatchQueue.global(qos: .background).async {
+            do {
+                let heroes: [Hero] = try self.heroService.getHeroStats()
+                subject.send(DataState<[Hero]>.data(data: heroes))  // --> Emit Data
+            } catch {
+                self.logger.log(message: error.localizedDescription)
+                let errorDialog = UIComponent.Dialog(
+                        title: "Erro de rede",
+                        description: error.localizedDescription
+                )
+                subject.send(DataState<[Hero]>.response(uiComponent: errorDialog))  // --> Emit Error
             }
-
-            return Disposables.create()
-
-        }.observe(on: SerialDispatchQueueScheduler(qos: .background))
+            subject.send(DataState<[Hero]>.loading(progressState: .idle)) // --> Emit Idle
+        }
+        return subject.eraseToAnyPublisher()
     }
 
 }

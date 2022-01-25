@@ -9,9 +9,10 @@ struct Dota_infoApp: App {
     init() {
         // Inject these
         let heroService = HeroServiceImpl.init()
-        let getHeroes = GetHeroes(heroService: heroService)
-        let logger = Logger.createDebugLogger(tag: "HeroList")
-        heroListViewModel = HeroListViewModel(getHeroes: getHeroes, logger: logger)
+        let heroListLogger = Logger.createDebugLogger(tag: "HeroList")
+        let getHeroesLogger = Logger.createDebugLogger(tag: "GetHeroes")
+        let getHeroes = GetHeroes(heroService: heroService, logger: getHeroesLogger)
+        heroListViewModel = HeroListViewModel(getHeroes: getHeroes, logger: heroListLogger)
     }
 
     var body: some Scene {

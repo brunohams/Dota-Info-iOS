@@ -26,11 +26,6 @@
                BlueprintName = "Dota-infoTests"
                ReferencedContainer = "container:Dota-info.xcodeproj">
             </BuildableReference>
-            <SelectedTests>
-               <Test
-                  Identifier = "GetHeroesTests">
-               </Test>
-            </SelectedTests>
          </TestableReference>
       </Testables>
    </TestAction>

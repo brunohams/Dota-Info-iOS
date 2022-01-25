@@ -12,7 +12,7 @@ class Logger {
 
     func log(message: String) {
         if isDebug {
-            print("LOG: \(message)")
+            print("\(tag) -: \(message)")
         } else {
             // LOG INTO PROD
             // TODO

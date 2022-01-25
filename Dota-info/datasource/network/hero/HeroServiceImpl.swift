@@ -8,8 +8,8 @@ class HeroServiceImpl: HeroService {
     func getHeroStats() throws -> [Hero] {
         var heroes: [Hero] = []
         var requestError: Error? = nil
-
         let request = AF.request(Endpoints.HERO_STATS)
+
         let group = DispatchGroup()
 
         group.enter()
@@ -17,15 +17,18 @@ class HeroServiceImpl: HeroService {
         DispatchQueue.global(qos: .default).sync {
             request.responseJSON { response in
                 do {
-                    heroes = try self.decoder.decode([HeroDto].self, from: response.data!).map { heroDto in heroDto.toHero() }
+                    if case let .failure(error) = response.result {
+                        throw error
+                    }
+                    guard let data = response.data else { throw NSError(domain: "Data", code: 1) }
+                    heroes = try self.decoder.decode([HeroDto].self, from: data).map { heroDto in heroDto.toHero() }
                 } catch {
                     // TODO - Improve Error handling
-                    print("Error GetHeroStats: \(error)")
+                    print("Error to parse object: \(error)")
                     requestError = error
                 }
                 group.leave()
             }
-
         }
 
         group.wait()

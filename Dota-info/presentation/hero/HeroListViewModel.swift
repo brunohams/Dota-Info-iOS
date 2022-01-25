@@ -4,7 +4,6 @@ import Combine
 
 class HeroListViewModel: ObservableObject {
 
-    var disposeBag = DisposeBag()
     @Published var state: HeroListState = HeroListState()
 
     // TODO - Inject that later
@@ -20,21 +19,18 @@ class HeroListViewModel: ObservableObject {
 
     func getHeroesList() {
         getHeroes.execute()
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] state in
-
-                self?.logger.log(message: "Event emitted: \(state)")
-
+            .subscribe(on: DispatchQueue.global(qos: .background))
+            .receive(on: DispatchQueue.main)
+            .sink { state in
                 switch (state) {
                     case .response(uiComponent: let uiComponent):
-                        self?.handleResponseState(uiComponent: uiComponent)
+                        self.handleResponseState(uiComponent: uiComponent)
                     case .data(data: let data):
-                        self?.updateDataState(data: data)
+                        self.updateDataState(data: data)
                     case .loading(progressState: let progressState):
-                        self?.updateProgressState(progress: progressState)
+                        self.updateProgressState(progress: progressState)
                 }
-
-            }).disposed(by: disposeBag)
+            }
     }
 
     func handleResponseState(uiComponent: UIComponent) {
