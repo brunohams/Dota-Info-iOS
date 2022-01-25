@@ -1,5 +1,4 @@
 import Foundation
-import RxSwift
 import Combine
 
 class HeroListViewModel: ObservableObject {
@@ -18,10 +17,11 @@ class HeroListViewModel: ObservableObject {
     }
 
     func getHeroesList() {
-        getHeroes.execute()
+        getHeroes.subject
             .subscribe(on: DispatchQueue.global(qos: .background))
             .receive(on: DispatchQueue.main)
             .sink { state in
+                print(state)
                 switch (state) {
                     case .response(uiComponent: let uiComponent):
                         self.handleResponseState(uiComponent: uiComponent)
@@ -31,6 +31,7 @@ class HeroListViewModel: ObservableObject {
                         self.updateProgressState(progress: progressState)
                 }
             }
+        getHeroes.execute()
     }
 
     func handleResponseState(uiComponent: UIComponent) {

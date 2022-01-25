@@ -13,6 +13,7 @@
 		853EADD4279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EADD3279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift */; };
 		8D8D64859220815F4A455226 /* Pods_Dota_info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D698E23B3C78B49735B56C /* Pods_Dota_info.framework */; };
 		A807DD430D64773432A7680A /* Pods_Dota_info_Dota_infoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CA7FFE959F9E41B98DE84D /* Pods_Dota_info_Dota_infoUITests.framework */; };
+		BE6AA003D965DD0876A25E2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2178431A1EE66FC6C9B /* Logger.swift */; };
 		BE6AA041EBC191E4C7F8479F /* ProgressState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA338F8A4A22FCA8C96B7 /* ProgressState.swift */; };
 		BE6AA0704C3161BD1B1E6010 /* HeroAttackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA09B3E78E5B3AB905AFC /* HeroAttackType.swift */; };
 		BE6AA09F080E260E05544A1B /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */; };
@@ -55,6 +56,7 @@
 		BE6AAE6DDF1A3CD24CA8FA5B /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */; };
 		BE6AAEE711EC81F3570E9273 /* HeroAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B4D7637B5CC4A07C01 /* HeroAttribute.swift */; };
 		BE6AAF802A63DB5760BB2766 /* GetHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA567E4140471F33A496B /* GetHeroes.swift */; };
+		BE6AAF98C611E2BF87F59EC6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2178431A1EE66FC6C9B /* Logger.swift */; };
 		BE6AAFB068247C1BD7353EAC /* HeroServiceResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3ACD03724B4F7E0813B /* HeroServiceResponseType.swift */; };
 		C7C0DAD02FFFD98817A5D88A /* Pods_Dota_infoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46970F3FA83628F8DE72A823 /* Pods_Dota_infoTests.framework */; };
 /* End PBXBuildFile section */
@@ -694,6 +696,7 @@
 				BE6AA52A5A95343C24605F57 /* HeroDataEmpty.swift in Sources */,
 				BE6AA5EC76300E7DEB5F8D79 /* HeroDataValid.swift in Sources */,
 				BE6AAAB5E4756F17A652A6C1 /* Endpoints.swift in Sources */,
+				BE6AA003D965DD0876A25E2A /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +706,7 @@
 			files = (
 				853EADD4279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift in Sources */,
 				853EADD2279992ED00265B7E /* Dota_infoUITests.swift in Sources */,
+				BE6AAF98C611E2BF87F59EC6 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
