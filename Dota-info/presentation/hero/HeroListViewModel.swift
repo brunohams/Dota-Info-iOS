@@ -5,13 +5,12 @@ class HeroListViewModel: ObservableObject {
 
     @Published var state: HeroListState = HeroListState()
 
-    // TODO - Inject that later
     let getHeroes: GetHeroes
     let logger: Logger
 
-    init (getHeroes: GetHeroes, logger: Logger) {
+    init (getHeroes: GetHeroes, logger: LoggerFactory) {
         self.getHeroes = getHeroes
-        self.logger = logger
+        self.logger = logger.createLogger(tag: "HeroListViewModel")
 
         getHeroesList()
     }
@@ -21,7 +20,6 @@ class HeroListViewModel: ObservableObject {
             .subscribe(on: DispatchQueue.global(qos: .background))
             .receive(on: DispatchQueue.main)
             .sink { state in
-                print(state)
                 switch (state) {
                     case .response(uiComponent: let uiComponent):
                         self.handleResponseState(uiComponent: uiComponent)

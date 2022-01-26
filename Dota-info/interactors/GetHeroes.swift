@@ -7,9 +7,9 @@ class GetHeroes {
     private let logger: Logger
     let subject = PassthroughSubject<DataState<[Hero]>, Never>()
 
-    init (heroService: HeroService, logger: Logger) {
+    init (heroService: HeroService, logger: LoggerFactory) {
         self.heroService = heroService
-        self.logger = logger
+        self.logger = logger.createLogger(tag: "GetHeroes")
     }
 
     func execute() {

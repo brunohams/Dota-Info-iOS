@@ -9,10 +9,10 @@ struct Dota_infoApp: App {
     init() {
         // Inject these
         let heroService = HeroServiceFake.init(responseType: .emptyList)
-        let heroListLogger = Logger.createDebugLogger(tag: "HeroList")
-        let getHeroesLogger = Logger.createDebugLogger(tag: "GetHeroes")
-        let getHeroes = GetHeroes(heroService: heroService, logger: getHeroesLogger)
-        heroListViewModel = HeroListViewModel(getHeroes: getHeroes, logger: heroListLogger)
+        let loggerFactory = LoggerDebugFactory()
+
+        let getHeroes = GetHeroes(heroService: heroService, logger: loggerFactory)
+        heroListViewModel = HeroListViewModel(getHeroes: getHeroes, logger: loggerFactory)
     }
 
     var body: some Scene {

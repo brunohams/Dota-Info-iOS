@@ -13,16 +13,18 @@
 		853EADD4279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EADD3279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift */; };
 		8D8D64859220815F4A455226 /* Pods_Dota_info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D698E23B3C78B49735B56C /* Pods_Dota_info.framework */; };
 		A807DD430D64773432A7680A /* Pods_Dota_info_Dota_infoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CA7FFE959F9E41B98DE84D /* Pods_Dota_info_Dota_infoUITests.framework */; };
-		BE6AA003D965DD0876A25E2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2178431A1EE66FC6C9B /* Logger.swift */; };
+		BE6AA00312D2A86443671525 /* LoggerFirebaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA81C6E823ED870A6B3E4 /* LoggerFirebaseFactory.swift */; };
 		BE6AA041EBC191E4C7F8479F /* ProgressState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA338F8A4A22FCA8C96B7 /* ProgressState.swift */; };
+		BE6AA0550B284F3CB9462745 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA380813131D4EF7C4044 /* Logger.swift */; };
 		BE6AA0704C3161BD1B1E6010 /* HeroAttackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA09B3E78E5B3AB905AFC /* HeroAttackType.swift */; };
 		BE6AA09F080E260E05544A1B /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */; };
 		BE6AA0B0BEA5AB39F4315447 /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA8AC44CBAB4D6945CED4 /* HeroService.swift */; };
+		BE6AA0E8A3CB6AB6C20417B0 /* LoggerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA611D6729B60FF4FB7B8 /* LoggerFactory.swift */; };
 		BE6AA1339AEDA067B8C484E3 /* HeroDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3BF87EE44580A9C3FD4 /* HeroDto.swift */; };
+		BE6AA185FA22D2118E643AEA /* LoggerFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA6A74F27C0E2DF12DAD2 /* LoggerFirebase.swift */; };
 		BE6AA1A3E191FC6DBD40914E /* HeroAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B4D7637B5CC4A07C01 /* HeroAttribute.swift */; };
 		BE6AA26B5196051CF50F842F /* GetHeroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA0F69D125FC5EBD0E01 /* GetHeroesTests.swift */; };
 		BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */; };
-		BE6AA2ADCE0C4D153C417729 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2178431A1EE66FC6C9B /* Logger.swift */; };
 		BE6AA3DC3FD1C316B38F0A6D /* HeroServiceFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE1E50149B5D2E9BCD33 /* HeroServiceFake.swift */; };
 		BE6AA3E3F639E6999E5298EC /* HeroListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE3C85CEDB31F3B79D76 /* HeroListState.swift */; };
 		BE6AA40E82839F5D3259895E /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2360A517CC858FFDCE8 /* DataState.swift */; };
@@ -31,32 +33,45 @@
 		BE6AA5CEEAF5A355EEE32149 /* HeroRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA39F45515A8EFBD77F64 /* HeroRow.swift */; };
 		BE6AA5EC76300E7DEB5F8D79 /* HeroDataValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA5FBABDCEC0DB5EAB03A /* HeroDataValid.swift */; };
 		BE6AA64E6421D1443AFC871F /* HeroAttackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA09B3E78E5B3AB905AFC /* HeroAttackType.swift */; };
+		BE6AA66961C7996E6EAA4610 /* LoggerFirebaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA81C6E823ED870A6B3E4 /* LoggerFirebaseFactory.swift */; };
+		BE6AA68C7CF6A8D2BAA2669E /* LoggerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA611D6729B60FF4FB7B8 /* LoggerFactory.swift */; };
 		BE6AA6D95EF2160014B942DA /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2360A517CC858FFDCE8 /* DataState.swift */; };
 		BE6AA6ED464EA82FD90F2A3A /* HeroRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */; };
 		BE6AA70E036FBC712384DA8D /* HeroDataValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA5FBABDCEC0DB5EAB03A /* HeroDataValid.swift */; };
 		BE6AA710B688CFDF930BE7D8 /* HeroListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE170743D99019238163 /* HeroListView.swift */; };
 		BE6AA7136197175C4B19F1C7 /* HeroListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA5F314E1BC0473CEABBA /* HeroListViewModel.swift */; };
+		BE6AA71B5EB100B8D3780FC2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA380813131D4EF7C4044 /* Logger.swift */; };
 		BE6AA7644184845A8B8B5C5F /* HeroDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3BF87EE44580A9C3FD4 /* HeroDto.swift */; };
+		BE6AA7AC911A1A14D6F1950B /* LoggerDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA5C7379294F3EA459B7A /* LoggerDebug.swift */; };
+		BE6AA7E1A33598DC9E323CCA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA380813131D4EF7C4044 /* Logger.swift */; };
+		BE6AA7FAFA339ADB8F124D13 /* LoggerDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA5C7379294F3EA459B7A /* LoggerDebug.swift */; };
+		BE6AA88A9694CBE5AAFABD44 /* LoggerDebugFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE086B820163AFE71A33 /* LoggerDebugFactory.swift */; };
 		BE6AA8A08CFC8A39BB51636F /* ProgressState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA338F8A4A22FCA8C96B7 /* ProgressState.swift */; };
 		BE6AA8B944CCEAE9C30897D9 /* HeroServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2551C15B4C4B84FD898 /* HeroServiceImpl.swift */; };
+		BE6AA8BAA6BC87F1CC759D73 /* LoggerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA611D6729B60FF4FB7B8 /* LoggerFactory.swift */; };
 		BE6AA8C406C2CB09C265CF99 /* HeroServiceFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE1E50149B5D2E9BCD33 /* HeroServiceFake.swift */; };
 		BE6AA8CE6F98E3A8312C6545 /* HeroDataMalformed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA9E2BC6B1A1F74525B5D /* HeroDataMalformed.swift */; };
 		BE6AA8E2067371EE0F3861B1 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA68A7FB41B92037E06B /* Hero.swift */; };
+		BE6AA96329EBA3D643DC7675 /* LoggerFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA6A74F27C0E2DF12DAD2 /* LoggerFirebase.swift */; };
 		BE6AAA44EC36A4DA038BCD72 /* GetHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA567E4140471F33A496B /* GetHeroes.swift */; };
 		BE6AAAAE9C6364E70DDBEE5F /* HeroDataMalformed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA9E2BC6B1A1F74525B5D /* HeroDataMalformed.swift */; };
 		BE6AAAB5E4756F17A652A6C1 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA0CFF0B232CB2413D8F0 /* Endpoints.swift */; };
 		BE6AAB52C8C552A6956419EC /* HeroServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2551C15B4C4B84FD898 /* HeroServiceImpl.swift */; };
 		BE6AABA52EB97A9488829F3E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA0B3EAAF3687DAE714E8 /* ActivityIndicator.swift */; };
 		BE6AAC2720B279385372C8EB /* HeroServiceResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3ACD03724B4F7E0813B /* HeroServiceResponseType.swift */; };
+		BE6AAD3714BA4061EE431878 /* LoggerFirebaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA81C6E823ED870A6B3E4 /* LoggerFirebaseFactory.swift */; };
 		BE6AADD40F7E4FB880C7D3FC /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA0CFF0B232CB2413D8F0 /* Endpoints.swift */; };
 		BE6AADDFC93479F222CAD8EF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BE6AA2968041C6B18F2E64F9 /* README.md */; };
 		BE6AADE349FB39E9FA0187E9 /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA8AC44CBAB4D6945CED4 /* HeroService.swift */; };
 		BE6AADE48FF56324212572F6 /* HeroDataEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAB639EAC79AB2A7E85AA /* HeroDataEmpty.swift */; };
 		BE6AAE295AF422CC4A7BDB0D /* HeroRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */; };
+		BE6AAE44E067D44E0C797EC1 /* LoggerDebugFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE086B820163AFE71A33 /* LoggerDebugFactory.swift */; };
 		BE6AAE6DDF1A3CD24CA8FA5B /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAF4C490A90A425D02ED4 /* UIComponent.swift */; };
+		BE6AAEC938FC91B3C54399C9 /* LoggerFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA6A74F27C0E2DF12DAD2 /* LoggerFirebase.swift */; };
+		BE6AAEDA8B82D0D1385E68BB /* LoggerDebugFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAE086B820163AFE71A33 /* LoggerDebugFactory.swift */; };
 		BE6AAEE711EC81F3570E9273 /* HeroAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7B4D7637B5CC4A07C01 /* HeroAttribute.swift */; };
 		BE6AAF802A63DB5760BB2766 /* GetHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA567E4140471F33A496B /* GetHeroes.swift */; };
-		BE6AAF98C611E2BF87F59EC6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA2178431A1EE66FC6C9B /* Logger.swift */; };
+		BE6AAFA5E6634BC3DE11205E /* LoggerDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA5C7379294F3EA459B7A /* LoggerDebug.swift */; };
 		BE6AAFB068247C1BD7353EAC /* HeroServiceResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3ACD03724B4F7E0813B /* HeroServiceResponseType.swift */; };
 		C7C0DAD02FFFD98817A5D88A /* Pods_Dota_infoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46970F3FA83628F8DE72A823 /* Pods_Dota_infoTests.framework */; };
 /* End PBXBuildFile section */
@@ -95,25 +110,30 @@
 		BE6AA09B3E78E5B3AB905AFC /* HeroAttackType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAttackType.swift; sourceTree = "<group>"; };
 		BE6AA0B3EAAF3687DAE714E8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		BE6AA0CFF0B232CB2413D8F0 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		BE6AA2178431A1EE66FC6C9B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		BE6AA2360A517CC858FFDCE8 /* DataState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
 		BE6AA2551C15B4C4B84FD898 /* HeroServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceImpl.swift; sourceTree = "<group>"; };
 		BE6AA2968041C6B18F2E64F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.me; path = README.md; sourceTree = "<group>"; };
 		BE6AA338F8A4A22FCA8C96B7 /* ProgressState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressState.swift; sourceTree = "<group>"; };
+		BE6AA380813131D4EF7C4044 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		BE6AA39F45515A8EFBD77F64 /* HeroRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroRow.swift; sourceTree = "<group>"; };
 		BE6AA3ACD03724B4F7E0813B /* HeroServiceResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceResponseType.swift; sourceTree = "<group>"; };
 		BE6AA3BF87EE44580A9C3FD4 /* HeroDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDto.swift; sourceTree = "<group>"; };
 		BE6AA567E4140471F33A496B /* GetHeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHeroes.swift; sourceTree = "<group>"; };
+		BE6AA5C7379294F3EA459B7A /* LoggerDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerDebug.swift; sourceTree = "<group>"; };
 		BE6AA5F314E1BC0473CEABBA /* HeroListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListViewModel.swift; sourceTree = "<group>"; };
 		BE6AA5FBABDCEC0DB5EAB03A /* HeroDataValid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDataValid.swift; sourceTree = "<group>"; };
+		BE6AA611D6729B60FF4FB7B8 /* LoggerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerFactory.swift; sourceTree = "<group>"; };
+		BE6AA6A74F27C0E2DF12DAD2 /* LoggerFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerFirebase.swift; sourceTree = "<group>"; };
 		BE6AA7B4D7637B5CC4A07C01 /* HeroAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAttribute.swift; sourceTree = "<group>"; };
 		BE6AA7B9A07CAD9A67084616 /* HeroRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroRole.swift; sourceTree = "<group>"; };
+		BE6AA81C6E823ED870A6B3E4 /* LoggerFirebaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerFirebaseFactory.swift; sourceTree = "<group>"; };
 		BE6AA8AC44CBAB4D6945CED4 /* HeroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
 		BE6AA9E2BC6B1A1F74525B5D /* HeroDataMalformed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDataMalformed.swift; sourceTree = "<group>"; };
 		BE6AAA0F69D125FC5EBD0E01 /* GetHeroesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHeroesTests.swift; sourceTree = "<group>"; };
 		BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dota_infoApp.swift; sourceTree = "<group>"; };
 		BE6AAA68A7FB41B92037E06B /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		BE6AAB639EAC79AB2A7E85AA /* HeroDataEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDataEmpty.swift; sourceTree = "<group>"; };
+		BE6AAE086B820163AFE71A33 /* LoggerDebugFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerDebugFactory.swift; sourceTree = "<group>"; };
 		BE6AAE170743D99019238163 /* HeroListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListView.swift; sourceTree = "<group>"; };
 		BE6AAE1E50149B5D2E9BCD33 /* HeroServiceFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceFake.swift; sourceTree = "<group>"; };
 		BE6AAE3C85CEDB31F3B79D76 /* HeroListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListState.swift; sourceTree = "<group>"; };
@@ -304,12 +324,33 @@
 			path = hero;
 			sourceTree = "<group>";
 		};
+		BE6AA78A5A8EC3CDC594F36A /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AA81C6E823ED870A6B3E4 /* LoggerFirebaseFactory.swift */,
+				BE6AA611D6729B60FF4FB7B8 /* LoggerFactory.swift */,
+				BE6AAE086B820163AFE71A33 /* LoggerDebugFactory.swift */,
+			);
+			path = factory;
+			sourceTree = "<group>";
+		};
 		BE6AA7BDAC840FE837F5444B /* util */ = {
 			isa = PBXGroup;
 			children = (
-				BE6AA2178431A1EE66FC6C9B /* Logger.swift */,
+				BE6AA82A4D1FF3700108646E /* logger */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		BE6AA82A4D1FF3700108646E /* logger */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AA6A74F27C0E2DF12DAD2 /* LoggerFirebase.swift */,
+				BE6AA5C7379294F3EA459B7A /* LoggerDebug.swift */,
+				BE6AA380813131D4EF7C4044 /* Logger.swift */,
+				BE6AA78A5A8EC3CDC594F36A /* factory */,
+			);
+			path = logger;
 			sourceTree = "<group>";
 		};
 		BE6AA91968580BD13EED3341 /* hero */ = {
@@ -656,7 +697,6 @@
 				BE6AA64E6421D1443AFC871F /* HeroAttackType.swift in Sources */,
 				BE6AA6ED464EA82FD90F2A3A /* HeroRole.swift in Sources */,
 				BE6AAA44EC36A4DA038BCD72 /* GetHeroes.swift in Sources */,
-				BE6AA2ADCE0C4D153C417729 /* Logger.swift in Sources */,
 				BE6AA710B688CFDF930BE7D8 /* HeroListView.swift in Sources */,
 				BE6AA3E3F639E6999E5298EC /* HeroListState.swift in Sources */,
 				BE6AA7136197175C4B19F1C7 /* HeroListViewModel.swift in Sources */,
@@ -671,6 +711,12 @@
 				BE6AAB52C8C552A6956419EC /* HeroServiceImpl.swift in Sources */,
 				BE6AA3DC3FD1C316B38F0A6D /* HeroServiceFake.swift in Sources */,
 				BE6AADD40F7E4FB880C7D3FC /* Endpoints.swift in Sources */,
+				BE6AA96329EBA3D643DC7675 /* LoggerFirebase.swift in Sources */,
+				BE6AAFA5E6634BC3DE11205E /* LoggerDebug.swift in Sources */,
+				BE6AA71B5EB100B8D3780FC2 /* Logger.swift in Sources */,
+				BE6AAD3714BA4061EE431878 /* LoggerFirebaseFactory.swift in Sources */,
+				BE6AA0E8A3CB6AB6C20417B0 /* LoggerFactory.swift in Sources */,
+				BE6AAE44E067D44E0C797EC1 /* LoggerDebugFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,7 +742,12 @@
 				BE6AA52A5A95343C24605F57 /* HeroDataEmpty.swift in Sources */,
 				BE6AA5EC76300E7DEB5F8D79 /* HeroDataValid.swift in Sources */,
 				BE6AAAB5E4756F17A652A6C1 /* Endpoints.swift in Sources */,
-				BE6AA003D965DD0876A25E2A /* Logger.swift in Sources */,
+				BE6AAEC938FC91B3C54399C9 /* LoggerFirebase.swift in Sources */,
+				BE6AA7FAFA339ADB8F124D13 /* LoggerDebug.swift in Sources */,
+				BE6AA0550B284F3CB9462745 /* Logger.swift in Sources */,
+				BE6AA00312D2A86443671525 /* LoggerFirebaseFactory.swift in Sources */,
+				BE6AA68C7CF6A8D2BAA2669E /* LoggerFactory.swift in Sources */,
+				BE6AA88A9694CBE5AAFABD44 /* LoggerDebugFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,7 +757,12 @@
 			files = (
 				853EADD4279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift in Sources */,
 				853EADD2279992ED00265B7E /* Dota_infoUITests.swift in Sources */,
-				BE6AAF98C611E2BF87F59EC6 /* Logger.swift in Sources */,
+				BE6AA185FA22D2118E643AEA /* LoggerFirebase.swift in Sources */,
+				BE6AA7AC911A1A14D6F1950B /* LoggerDebug.swift in Sources */,
+				BE6AA7E1A33598DC9E323CCA /* Logger.swift in Sources */,
+				BE6AA66961C7996E6EAA4610 /* LoggerFirebaseFactory.swift in Sources */,
+				BE6AA8BAA6BC87F1CC759D73 /* LoggerFactory.swift in Sources */,
+				BE6AAEDA8B82D0D1385E68BB /* LoggerDebugFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
