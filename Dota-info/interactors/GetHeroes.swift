@@ -7,14 +7,15 @@ class GetHeroes {
     private let logger: Logger
     let subject = PassthroughSubject<DataState<[Hero]>, Never>()
 
-    init (heroService: HeroService, logger: LoggerFactory) {
+    init (heroService: HeroService, loggerFactory: LoggerFactory) {
         self.heroService = heroService
-        self.logger = logger.createLogger(tag: "GetHeroes")
+        self.logger = loggerFactory.createLogger(tag: "GetHeroes")
     }
 
     func execute() {
-        DispatchQueue.main.asyncAfter(deadline:.now() + 0.001) { // TODO <-- Se livrar dessa gambiarra | Se chamar sem o delay, o primeiro send não esta sendo enviado
+        DispatchQueue.global(qos: .background).asyncAfter(deadline:.now() + 0.001) { // TODO <-- Se livrar dessa gambiarra | Se chamar sem o delay, o primeiro send não esta sendo enviado
             self.subject.send(DataState<[Hero]>.loading(progressState: .loading)) // --> Emit Loading
+            sleep(3)
 
             do {
                 let heroes: [Hero] = try self.heroService.getHeroStats()

@@ -8,9 +8,9 @@ class HeroListViewModel: ObservableObject {
     let getHeroes: GetHeroes
     let logger: Logger
 
-    init (getHeroes: GetHeroes, logger: LoggerFactory) {
+    init (getHeroes: GetHeroes, loggerFactory: LoggerFactory) {
         self.getHeroes = getHeroes
-        self.logger = logger.createLogger(tag: "HeroListViewModel")
+        self.logger = loggerFactory.createLogger(tag: "HeroListViewModel")
 
         getHeroesList()
     }
