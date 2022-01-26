@@ -7,12 +7,12 @@ struct HeroListView: View {
 
     var body: some View {
 
-        List(viewModel.state.heroes) { hero in
-            HeroRow(hero: hero)
-        }
-
         if viewModel.state.progressBar == .loading {
             ActivityIndicator()
+        } else {
+            List(viewModel.state.heroes) { hero in
+                HeroRow(hero: hero)
+            }
         }
 
         if let dialog = viewModel.state.dialog as? UIComponent.Dialog {
