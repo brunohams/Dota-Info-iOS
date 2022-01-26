@@ -1,5 +1,5 @@
 import SwiftUI
-@testable import Hero
+@testable import Domain
 
 struct HeroRow: View {
     var hero: Hero

@@ -1,7 +1,8 @@
 import Foundation
 import Combine
 @testable import Core
-@testable import Hero
+@testable import Interactors
+@testable import Domain
 
 class HeroListViewModel: ObservableObject {
 

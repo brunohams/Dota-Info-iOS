@@ -10,9 +10,11 @@
 		05FD74D6B59D1C665941AD18 /* Pods_Dota_info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D14B0C28801859227B3228D /* Pods_Dota_info.framework */; };
 		78DB2443E593270413039D47 /* Pods_Dota_infoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1694D197412BDC5A07C95D /* Pods_Dota_infoTests.framework */; };
 		7B24EE218CA6078E9F63AA92 /* Pods_Dota_info_Dota_infoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B47FD789BF67569EEEB65AD /* Pods_Dota_info_Dota_infoUITests.framework */; };
+		85023E6A27A1B6F200CE9BE8 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 85023E6927A1B6F200CE9BE8 /* Domain */; };
+		85023E6C27A1B6F200CE9BE8 /* Interactors in Frameworks */ = {isa = PBXBuildFile; productRef = 85023E6B27A1B6F200CE9BE8 /* Interactors */; };
+		85023E6E27A1B8B600CE9BE8 /* DataSource in Frameworks */ = {isa = PBXBuildFile; productRef = 85023E6D27A1B8B600CE9BE8 /* DataSource */; };
 		8528387527A194B100BCA177 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8528387427A194B100BCA177 /* Alamofire */; };
 		85351EE327A18D11005785B6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 85351EE227A18D11005785B6 /* Core */; };
-		85351EE827A1911F005785B6 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 85351EE727A1911F005785B6 /* Hero */; };
 		853EADBB279992ED00265B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBA279992ED00265B7E /* Assets.xcassets */; };
 		853EADBE279992ED00265B7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBD279992ED00265B7E /* Preview Assets.xcassets */; };
 		853EADD2279992ED00265B7E /* Dota_infoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EADD1279992ED00265B7E /* Dota_infoUITests.swift */; };
@@ -48,8 +50,10 @@
 		4299642300288066EF8F574D /* Pods-Dota-info-Dota-infoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dota-info-Dota-infoUITests.release.xcconfig"; path = "Target Support Files/Pods-Dota-info-Dota-infoUITests/Pods-Dota-info-Dota-infoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B47FD789BF67569EEEB65AD /* Pods_Dota_info_Dota_infoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dota_info_Dota_infoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D14B0C28801859227B3228D /* Pods_Dota_info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dota_info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85023E6427A1B6C400CE9BE8 /* DataSource */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DataSource; path = Packages/DataSource; sourceTree = "<group>"; };
+		85023E6527A1B6D000CE9BE8 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Domain; path = Packages/Domain; sourceTree = "<group>"; };
+		85023E6627A1B6DA00CE9BE8 /* Interactors */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Interactors; path = Packages/Interactors; sourceTree = "<group>"; };
 		85351EE127A18CE6005785B6 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Packages/Core; sourceTree = "<group>"; };
-		85351EE427A1908A005785B6 /* Hero */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Hero; path = Packages/Hero; sourceTree = "<group>"; };
 		853EADB3279992EC00265B7E /* Dota-info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota-info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		853EADBA279992ED00265B7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853EADBD279992ED00265B7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -76,9 +80,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85023E6A27A1B6F200CE9BE8 /* Domain in Frameworks */,
+				85023E6E27A1B8B600CE9BE8 /* DataSource in Frameworks */,
 				8528387527A194B100BCA177 /* Alamofire in Frameworks */,
+				85023E6C27A1B6F200CE9BE8 /* Interactors in Frameworks */,
 				85351EE327A18D11005785B6 /* Core in Frameworks */,
-				85351EE827A1911F005785B6 /* Hero in Frameworks */,
 				05FD74D6B59D1C665941AD18 /* Pods_Dota_info.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,7 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				85351EE127A18CE6005785B6 /* Core */,
-				85351EE427A1908A005785B6 /* Hero */,
+				85023E6427A1B6C400CE9BE8 /* DataSource */,
+				85023E6527A1B6D000CE9BE8 /* Domain */,
+				85023E6627A1B6DA00CE9BE8 /* Interactors */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -240,8 +248,10 @@
 			name = "Dota-info";
 			packageProductDependencies = (
 				85351EE227A18D11005785B6 /* Core */,
-				85351EE727A1911F005785B6 /* Hero */,
 				8528387427A194B100BCA177 /* Alamofire */,
+				85023E6927A1B6F200CE9BE8 /* Domain */,
+				85023E6B27A1B6F200CE9BE8 /* Interactors */,
+				85023E6D27A1B8B600CE9BE8 /* DataSource */,
 			);
 			productName = "Dota-info";
 			productReference = 853EADB3279992EC00265B7E /* Dota-info.app */;
@@ -801,6 +811,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		85023E6927A1B6F200CE9BE8 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		85023E6B27A1B6F200CE9BE8 /* Interactors */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Interactors;
+		};
+		85023E6D27A1B8B600CE9BE8 /* DataSource */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataSource;
+		};
 		8528387427A194B100BCA177 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8528387327A194B100BCA177 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -809,10 +831,6 @@
 		85351EE227A18D11005785B6 /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
-		};
-		85351EE727A1911F005785B6 /* Hero */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Hero;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

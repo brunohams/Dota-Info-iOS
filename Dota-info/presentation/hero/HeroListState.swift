@@ -1,6 +1,6 @@
 import Foundation
 @testable import Core
-@testable import Hero
+@testable import Domain
 
 class HeroListState {
     var heroes: [Hero] = []

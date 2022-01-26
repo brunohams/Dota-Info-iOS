@@ -1,6 +1,7 @@
 import SwiftUI
 @testable import Core
-@testable import Hero
+@testable import Interactors
+@testable import DataSource
 
 @main
 struct Dota_infoApp: App {

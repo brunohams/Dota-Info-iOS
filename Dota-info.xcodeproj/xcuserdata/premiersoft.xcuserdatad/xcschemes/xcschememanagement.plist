@@ -4,6 +4,13 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>All in GetHeroesTests.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Dota-info.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -14,30 +21,21 @@
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
-		<key>GetHeroesTests.xcscheme</key>
+		<key>Dota_infoTests.testWhenValidDataShouldReturnSuccess.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false />
 			<key>orderHint</key>
 			<integer>1</integer>
-		</dict>
-		<key>GetHeroesTests.testWhenEmptyDataShouldReturnSuccessWithEmptyList.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false />
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>GetHeroesTests.testWhenCorruptedJsonDataShouldReturnError.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
-		<key>All in GetHeroesTests.swift.xcscheme</key>
+		<key>GetHeroesTests.testWhenEmptyDataShouldReturnSuccessWithEmptyList.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
@@ -49,7 +47,14 @@
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
+		</dict>
+		<key>GetHeroesTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 </dict>
