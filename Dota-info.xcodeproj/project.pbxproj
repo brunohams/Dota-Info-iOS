@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85351EE327A18D11005785B6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 85351EE227A18D11005785B6 /* Core */; };
 		853EADBB279992ED00265B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBA279992ED00265B7E /* Assets.xcassets */; };
 		853EADBE279992ED00265B7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBD279992ED00265B7E /* Preview Assets.xcassets */; };
 		853EADD2279992ED00265B7E /* Dota_infoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EADD1279992ED00265B7E /* Dota_infoUITests.swift */; };
@@ -100,6 +101,7 @@
 		46970F3FA83628F8DE72A823 /* Pods_Dota_infoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dota_infoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607D143431807673A3F9AF70 /* Pods-Dota-info.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dota-info.release.xcconfig"; path = "Target Support Files/Pods-Dota-info/Pods-Dota-info.release.xcconfig"; sourceTree = "<group>"; };
 		74CA7FFE959F9E41B98DE84D /* Pods_Dota_info_Dota_infoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dota_info_Dota_infoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85351EE127A18CE6005785B6 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Packages/Core; sourceTree = "<group>"; };
 		853EADB3279992EC00265B7E /* Dota-info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota-info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		853EADBA279992ED00265B7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853EADBD279992ED00265B7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8D64859220815F4A455226 /* Pods_Dota_info.framework in Frameworks */,
+				85351EE327A18D11005785B6 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,9 +197,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		85351EE027A18CE6005785B6 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				85351EE127A18CE6005785B6 /* Core */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		853EADAA279992EC00265B7E = {
 			isa = PBXGroup;
 			children = (
+				85351EE027A18CE6005785B6 /* Packages */,
 				853EADB5279992EC00265B7E /* Dota-info */,
 				853EADC6279992ED00265B7E /* Dota-infoTests */,
 				853EADD0279992ED00265B7E /* Dota-infoUITests */,
@@ -450,6 +462,9 @@
 			dependencies = (
 			);
 			name = "Dota-info";
+			packageProductDependencies = (
+				85351EE227A18D11005785B6 /* Core */,
+			);
 			productName = "Dota-info";
 			productReference = 853EADB3279992EC00265B7E /* Dota-info.app */;
 			productType = "com.apple.product-type.application";
@@ -1098,6 +1113,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85351EE227A18D11005785B6 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 853EADAB279992EC00265B7E /* Project object */;
 }
