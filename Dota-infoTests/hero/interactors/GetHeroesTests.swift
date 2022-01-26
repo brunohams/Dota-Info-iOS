@@ -3,7 +3,7 @@ import Combine
 
 class GetHeroesTests: XCTestCase {
 
-    let logger = Logger.createDebugLogger(tag: "GetHeroesTests")
+    let loggerFactory = LoggerDebugFactory()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -16,7 +16,7 @@ class GetHeroesTests: XCTestCase {
     func testWhenValidDataShouldReturnSuccess() throws {
         // GIVEN
         let service = HeroServiceFake.init(responseType: HeroServiceResponseType.goodData)
-        let getHeroes = GetHeroes(heroService: service, logger: logger)
+        let getHeroes = GetHeroes(heroService: service, loggerFactory: loggerFactory)
         var emissions: [DataState<[Hero]>] = []
         let receivedAllValues = expectation(description: "all values emitted")
 
@@ -66,7 +66,7 @@ class GetHeroesTests: XCTestCase {
     func testWhenEmptyDataShouldReturnSuccessWithEmptyList() throws {
 
         let service = HeroServiceFake.init(responseType: HeroServiceResponseType.emptyList)
-        let getHeroes = GetHeroes(heroService: service, logger: logger)
+        let getHeroes = GetHeroes(heroService: service, loggerFactory: loggerFactory)
         var emissions: [DataState<[Hero]>] = []
         let receivedAllValues = expectation(description: "all values emitted")
 
@@ -116,7 +116,7 @@ class GetHeroesTests: XCTestCase {
     func testWhenCorruptedJsonDataShouldReturnError() throws {
 
         let service = HeroServiceFake.init(responseType: HeroServiceResponseType.malformed)
-        let getHeroes = GetHeroes(heroService: service, logger: logger)
+        let getHeroes = GetHeroes(heroService: service, loggerFactory: loggerFactory)
         var emissions: [DataState<[Hero]>] = []
         let receivedAllValues = expectation(description: "all values emitted")
 
