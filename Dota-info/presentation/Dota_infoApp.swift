@@ -1,4 +1,5 @@
 import SwiftUI
+@testable import Core
 
 @main
 struct Dota_infoApp: App {

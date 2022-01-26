@@ -1,4 +1,5 @@
 import Foundation
+@testable import Core
 
 class HeroListState {
     var heroes: [Hero] = []
