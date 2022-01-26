@@ -316,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				BE6AA9A0EF48772E2D0CC39B /* hero */,
-				BE6AACDE91682890EADB0195 /* util */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -353,13 +352,6 @@
 				BE6AA3ACD03724B4F7E0813B /* HeroServiceResponseType.swift */,
 			);
 			path = network;
-			sourceTree = "<group>";
-		};
-		BE6AACDE91682890EADB0195 /* util */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
