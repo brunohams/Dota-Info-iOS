@@ -1,5 +1,6 @@
 import SwiftUI
 @testable import Core
+@testable import Hero
 
 struct HeroListView: View {
 
