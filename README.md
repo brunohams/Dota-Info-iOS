@@ -1,5 +1,5 @@
 # Dota-Info
-### project based on MitchCourse for Android (mitchtabian/Dota-Info: Multi-module, Kotlin, MVI, Compose ...https://github.com › mitchtabian)
+### [project based on MitchCourse for Android](https://github.com/mitchtabian/Dota-Info)
 
 *This project was made to test a clean architecture implementation on iOS (Swift)*
 
