@@ -41,28 +41,25 @@ class GetHeroesTests: XCTestCase {
         XCTAssertEqual(emissions.count, 3)
 
         // Assert that the first emit should be LOADING
-        switch (emissions[0]) {
-            case .loading(progressState: let progressState):
-                XCTAssert(progressState == ProgressState.loading)
-            default:
-                XCTAssert(false, "Emission not the right type")
+        if case let .loading(progressState) = emissions[0] {
+            XCTAssert(progressState == ProgressState.loading)
+        } else {
+            XCTAssert(false, "Emission not the right type")
         }
 
         // Assert that the second emission should be DATA
-        switch (emissions[1]) {
-            case .data(data: let data):
-                XCTAssertNotNil(data) // Is not nil
-                XCTAssertGreaterThan(data!.count, 0) // has values
-            default:
-                XCTAssert(false, "Emission not the right type")
+        if case let .data(data) = emissions[1] {
+            XCTAssertNotNil(data) // Is not nil
+            XCTAssertGreaterThan(data!.count, 0) // has values
+        } else {
+            XCTAssert(false, "Emission not the right type")
         }
 
         // Assert that the third emission should be IDLE
-        switch (emissions[2]) {
-            case .loading(progressState: let progressState):
-                XCTAssert(progressState == ProgressState.idle)
-            default:
-                XCTAssert(false, "Emission not the right type")
+        if case let .loading(progressState) = emissions[2] {
+            XCTAssert(progressState == ProgressState.idle)
+        } else {
+            XCTAssert(false, "Emission not the right type")
         }
 
     }
@@ -91,27 +88,24 @@ class GetHeroesTests: XCTestCase {
         XCTAssertEqual(emissions.count, 3)
 
         // Assert that the first emit should be LOADING
-        switch (emissions[0]) {
-        case .loading(progressState: let progressState):
+        if case let .loading(progressState) = emissions[0] {
             XCTAssert(progressState == ProgressState.loading)
-        default:
+        } else {
             XCTAssert(false, "Emission not the right type")
         }
 
         // Assert that the second emission should be DATA
-        switch (emissions[1]) {
-        case .data(data: let data):
+        if case let .data(data) = emissions[1] {
             XCTAssertNotNil(data) // Is not nil
             XCTAssertEqual(data!.count, 0) // has values
-        default:
+        } else {
             XCTAssert(false, "Emission not the right type")
         }
 
         // Assert that the third emission should be IDLE
-        switch (emissions[2]) {
-        case .loading(progressState: let progressState):
+        if case let .loading(progressState) = emissions[2] {
             XCTAssert(progressState == ProgressState.idle)
-        default:
+        } else {
             XCTAssert(false, "Emission not the right type")
         }
 
@@ -140,28 +134,25 @@ class GetHeroesTests: XCTestCase {
         XCTAssertEqual(emissions.count, 3)
 
         // Assert that the first emit should be LOADING
-        switch (emissions[0]) {
-        case .loading(progressState: let progressState):
+        if case let .loading(progressState) = emissions[0] {
             XCTAssert(progressState == ProgressState.loading)
-        default:
+        } else {
             XCTAssert(false, "Emission not the right type")
         }
 
         // Assert that the second emission should be ERROR
-        switch (emissions[1]) {
-        case .response(uiComponent: let uiComponent):
+        if case let .response(uiComponent) = emissions[1] {
             XCTAssertNotNil(uiComponent) // Is not nil
             XCTAssert(uiComponent is UIComponent.Dialog)
             XCTAssertEqual((uiComponent as? UIComponent.Dialog)?.title, "Erro de rede")
-        default:
+        } else {
             XCTAssert(false, "Emission not the right type")
         }
 
         // Assert that the third emission should be IDLE
-        switch (emissions[2]) {
-        case .loading(progressState: let progressState):
+        if case let .loading(progressState) = emissions[2] {
             XCTAssert(progressState == ProgressState.idle)
-        default:
+        } else {
             XCTAssert(false, "Emission not the right type")
         }
 
