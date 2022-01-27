@@ -12,8 +12,6 @@
 		7B24EE218CA6078E9F63AA92 /* Pods_Dota_info_Dota_infoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B47FD789BF67569EEEB65AD /* Pods_Dota_info_Dota_infoUITests.framework */; };
 		85023E6A27A1B6F200CE9BE8 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 85023E6927A1B6F200CE9BE8 /* Domain */; };
 		85023E6C27A1B6F200CE9BE8 /* Interactors in Frameworks */ = {isa = PBXBuildFile; productRef = 85023E6B27A1B6F200CE9BE8 /* Interactors */; };
-		85023E6E27A1B8B600CE9BE8 /* DataSource in Frameworks */ = {isa = PBXBuildFile; productRef = 85023E6D27A1B8B600CE9BE8 /* DataSource */; };
-		8528387527A194B100BCA177 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8528387427A194B100BCA177 /* Alamofire */; };
 		85351EE327A18D11005785B6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 85351EE227A18D11005785B6 /* Core */; };
 		853EADBB279992ED00265B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBA279992ED00265B7E /* Assets.xcassets */; };
 		853EADBE279992ED00265B7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBD279992ED00265B7E /* Preview Assets.xcassets */; };
@@ -81,8 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				85023E6A27A1B6F200CE9BE8 /* Domain in Frameworks */,
-				85023E6E27A1B8B600CE9BE8 /* DataSource in Frameworks */,
-				8528387527A194B100BCA177 /* Alamofire in Frameworks */,
 				85023E6C27A1B6F200CE9BE8 /* Interactors in Frameworks */,
 				85351EE327A18D11005785B6 /* Core in Frameworks */,
 				05FD74D6B59D1C665941AD18 /* Pods_Dota_info.framework in Frameworks */,
@@ -248,10 +244,8 @@
 			name = "Dota-info";
 			packageProductDependencies = (
 				85351EE227A18D11005785B6 /* Core */,
-				8528387427A194B100BCA177 /* Alamofire */,
 				85023E6927A1B6F200CE9BE8 /* Domain */,
 				85023E6B27A1B6F200CE9BE8 /* Interactors */,
-				85023E6D27A1B8B600CE9BE8 /* DataSource */,
 			);
 			productName = "Dota-info";
 			productReference = 853EADB3279992EC00265B7E /* Dota-info.app */;
@@ -818,15 +812,6 @@
 		85023E6B27A1B6F200CE9BE8 /* Interactors */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Interactors;
-		};
-		85023E6D27A1B8B600CE9BE8 /* DataSource */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DataSource;
-		};
-		8528387427A194B100BCA177 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8528387327A194B100BCA177 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 		85351EE227A18D11005785B6 /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
