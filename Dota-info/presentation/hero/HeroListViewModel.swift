@@ -1,7 +1,7 @@
 import Foundation
 import Combine
+import RxSwift
 @testable import Core
-@testable import Interactors
 @testable import Domain
 
 class HeroListViewModel: ObservableObject {
@@ -19,20 +19,25 @@ class HeroListViewModel: ObservableObject {
     }
 
     func getHeroesList() {
-        getHeroes.subject
-            .subscribe(on: DispatchQueue.global(qos: .background))
-            .receive(on: DispatchQueue.main)
-            .sink { state in
+//        getHeroes.subject
+//            .subscribe(on: DispatchQueue.global(qos: .background))
+//            .receive(on: DispatchQueue.main)
+//            .sink { state in
+
+//            }
+        getHeroes.execute()
+            .observe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .subscribe(onNext: { state in
                 switch (state) {
-                    case .response(uiComponent: let uiComponent):
+                    case .response(let uiComponent):
                         self.handleResponseState(uiComponent: uiComponent)
-                    case .data(data: let data):
+                    case .data(let data):
                         self.updateDataState(data: data)
-                    case .loading(progressState: let progressState):
+                    case .loading(let progressState):
                         self.updateProgressState(progress: progressState)
                 }
-            }
-        getHeroes.execute()
+            })
+            .dispose()
     }
 
     func handleResponseState(uiComponent: UIComponent) {

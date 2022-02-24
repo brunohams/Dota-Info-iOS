@@ -1,4 +1,4 @@
-import Foundation
+@testable import Domain
 
 class LoggerFirebaseFactory: LoggerFactory {
 

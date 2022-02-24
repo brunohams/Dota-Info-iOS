@@ -1,4 +1,4 @@
-import Foundation
+@testable import Domain
 
 class LoggerFirebase: Logger {
 
@@ -12,7 +12,6 @@ class LoggerFirebase: Logger {
 
     func log(message: String) {
         // LOG INTO PROD
-        // TODO
     }
 
 }

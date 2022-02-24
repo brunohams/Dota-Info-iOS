@@ -1,5 +1,5 @@
 import SwiftUI
-@testable import Core
+@testable import Domain
 
 struct HeroListView: View {
 

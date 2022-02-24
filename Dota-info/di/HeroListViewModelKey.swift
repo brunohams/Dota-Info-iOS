@@ -1,6 +1,4 @@
 @testable import Core
-@testable import DataSource
-@testable import Interactors
 
 struct HeroListViewModelKey: InjectionKey {
     typealias Value = HeroListViewModel

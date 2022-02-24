@@ -10,13 +10,13 @@
 		05FD74D6B59D1C665941AD18 /* Pods_Dota_info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D14B0C28801859227B3228D /* Pods_Dota_info.framework */; };
 		78DB2443E593270413039D47 /* Pods_Dota_infoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1694D197412BDC5A07C95D /* Pods_Dota_infoTests.framework */; };
 		7B24EE218CA6078E9F63AA92 /* Pods_Dota_info_Dota_infoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B47FD789BF67569EEEB65AD /* Pods_Dota_info_Dota_infoUITests.framework */; };
-		85023E6A27A1B6F200CE9BE8 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 85023E6927A1B6F200CE9BE8 /* Domain */; };
-		85023E6C27A1B6F200CE9BE8 /* Interactors in Frameworks */ = {isa = PBXBuildFile; productRef = 85023E6B27A1B6F200CE9BE8 /* Interactors */; };
-		85351EE327A18D11005785B6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 85351EE227A18D11005785B6 /* Core */; };
 		853EADBB279992ED00265B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBA279992ED00265B7E /* Assets.xcassets */; };
 		853EADBE279992ED00265B7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBD279992ED00265B7E /* Preview Assets.xcassets */; };
 		853EADD2279992ED00265B7E /* Dota_infoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EADD1279992ED00265B7E /* Dota_infoUITests.swift */; };
 		853EADD4279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853EADD3279992ED00265B7E /* Dota_infoUITestsLaunchTests.swift */; };
+		85959E7127C7C4CB002EE595 /* DataSource in Frameworks */ = {isa = PBXBuildFile; productRef = 85959E7027C7C4CB002EE595 /* DataSource */; };
+		85959E7327C7C55F002EE595 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 85959E7227C7C55F002EE595 /* Core */; };
+		85959E7527C7C55F002EE595 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 85959E7427C7C55F002EE595 /* Domain */; };
 		BE6AA1BBB911A9AAA4813B8D /* HeroListViewModelKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */; };
 		BE6AA250F9C2EF0F86C33FEA /* HeroListViewModelKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */; };
 		BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */; };
@@ -62,7 +62,6 @@
 		7D14B0C28801859227B3228D /* Pods_Dota_info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dota_info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85023E6427A1B6C400CE9BE8 /* DataSource */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DataSource; path = Packages/DataSource; sourceTree = "<group>"; };
 		85023E6527A1B6D000CE9BE8 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Domain; path = Packages/Domain; sourceTree = "<group>"; };
-		85023E6627A1B6DA00CE9BE8 /* Interactors */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Interactors; path = Packages/Interactors; sourceTree = "<group>"; };
 		85351EE127A18CE6005785B6 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Packages/Core; sourceTree = "<group>"; };
 		853EADB3279992EC00265B7E /* Dota-info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota-info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		853EADBA279992ED00265B7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,10 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85023E6A27A1B6F200CE9BE8 /* Domain in Frameworks */,
-				85023E6C27A1B6F200CE9BE8 /* Interactors in Frameworks */,
-				85351EE327A18D11005785B6 /* Core in Frameworks */,
 				05FD74D6B59D1C665941AD18 /* Pods_Dota_info.framework in Frameworks */,
+				85959E7127C7C4CB002EE595 /* DataSource in Frameworks */,
+				85959E7527C7C55F002EE595 /* Domain in Frameworks */,
+				85959E7327C7C55F002EE595 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +138,6 @@
 				85351EE127A18CE6005785B6 /* Core */,
 				85023E6427A1B6C400CE9BE8 /* DataSource */,
 				85023E6527A1B6D000CE9BE8 /* Domain */,
-				85023E6627A1B6DA00CE9BE8 /* Interactors */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -271,9 +269,9 @@
 			);
 			name = "Dota-info";
 			packageProductDependencies = (
-				85351EE227A18D11005785B6 /* Core */,
-				85023E6927A1B6F200CE9BE8 /* Domain */,
-				85023E6B27A1B6F200CE9BE8 /* Interactors */,
+				85959E7027C7C4CB002EE595 /* DataSource */,
+				85959E7227C7C55F002EE595 /* Core */,
+				85959E7427C7C55F002EE595 /* Domain */,
 			);
 			productName = "Dota-info";
 			productReference = 853EADB3279992EC00265B7E /* Dota-info.app */;
@@ -574,6 +572,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -628,6 +627,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -845,17 +845,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		85023E6927A1B6F200CE9BE8 /* Domain */ = {
+		85959E7027C7C4CB002EE595 /* DataSource */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Domain;
+			productName = DataSource;
 		};
-		85023E6B27A1B6F200CE9BE8 /* Interactors */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Interactors;
-		};
-		85351EE227A18D11005785B6 /* Core */ = {
+		85959E7227C7C55F002EE595 /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
+		};
+		85959E7427C7C55F002EE595 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

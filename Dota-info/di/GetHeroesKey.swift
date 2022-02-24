@@ -1,6 +1,5 @@
 @testable import Core
-@testable import DataSource
-@testable import Interactors
+@testable import Domain
 
 struct GetHeroesKey: InjectionKey {
     typealias Value = GetHeroes

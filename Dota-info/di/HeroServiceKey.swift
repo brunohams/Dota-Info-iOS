@@ -1,4 +1,5 @@
 @testable import Core
+@testable import Domain
 @testable import DataSource
 
 struct HeroServiceKey: InjectionKey {
