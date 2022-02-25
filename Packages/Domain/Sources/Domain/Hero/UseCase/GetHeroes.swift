@@ -12,41 +12,48 @@ class GetHeroes {
     }
 
     func execute() -> Observable<DataState<[Hero]>> {
-        return Observable.create { observer in
-            
-            DispatchQueue.global(qos: .background).async {
-                observer.on(
-                    .next(DataState<[Hero]>.loading(progressState: .loading)) // Emit LOADING
-                )
-                sleep(3)
+        
+        return Observable<DataState<[Hero]>>.create { [weak self] observer in
+
+            DispatchQueue.global(qos: .background).async( execute: {
+
+                guard let self = self else { return }
+
+                observer.onNext(DataState<[Hero]>.progress(.loading))  // Emit LOADING
 
                 do {
+                    
                     let heroes: [Hero] = try self.heroService.getHeroStats()
-                    observer.on(
-                        .next(DataState<[Hero]>.data(data: heroes)) // --> Emit Data
-                    )
+                    observer.onNext(DataState<[Hero]>.data(heroes))  // --> Emit Data
+                    
                 } catch {
+                    
                     self.logger.log(message: error.localizedDescription)
 
-                    let errorDialog = UIComponent.Dialog(
-                            title: "Erro de rede",
-                            description: error.localizedDescription
-                    )
-                    observer.on(
-                        .next(DataState<[Hero]>.response(uiComponent: errorDialog)) // --> Emit Data
-                    )
+                    let errorDialog = self.createNetworkErrorDialog(for: error)
+                    observer.onNext(DataState<[Hero]>.response(uiComponent: errorDialog))  // --> Emit Error
+                    
                 }
 
-                observer.on(
-                    .next(DataState<[Hero]>.loading(progressState: .idle)) // --> Emit Idle
-                )
+                observer.onNext(DataState<[Hero]>.progress(.idle))  // --> Emit Idle
+                observer.onCompleted()
                 
-                observer.on(.completed)
-            }
-            
-            
+            })
+
             return Disposables.create()
-        }
+
+        }.observe(on: SerialDispatchQueueScheduler(qos: .background))
+
     }
+
+    private func createNetworkErrorDialog(for error: Error) -> UIComponent.Dialog {
+        
+        return UIComponent.Dialog(
+            title: "Erro de rede",
+            description: error.localizedDescription
+        )
+        
+    }
+
 
 }

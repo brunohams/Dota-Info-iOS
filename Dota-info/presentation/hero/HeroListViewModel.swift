@@ -19,25 +19,18 @@ class HeroListViewModel: ObservableObject {
     }
 
     func getHeroesList() {
-//        getHeroes.subject
-//            .subscribe(on: DispatchQueue.global(qos: .background))
-//            .receive(on: DispatchQueue.main)
-//            .sink { state in
-
-//            }
         getHeroes.execute()
-            .observe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .observe(on: MainScheduler.instance)
             .subscribe(onNext: { state in
                 switch (state) {
                     case .response(let uiComponent):
                         self.handleResponseState(uiComponent: uiComponent)
                     case .data(let data):
                         self.updateDataState(data: data)
-                    case .loading(let progressState):
+                    case .progress(let progressState):
                         self.updateProgressState(progress: progressState)
                 }
             })
-            .dispose()
     }
 
     func handleResponseState(uiComponent: UIComponent) {
@@ -66,8 +59,6 @@ class HeroListViewModel: ObservableObject {
     }
 
     func show(dialog: UIComponent.Dialog) {
-        dialog.title
-        dialog.description
         state.dialog = dialog
         state = state
     }

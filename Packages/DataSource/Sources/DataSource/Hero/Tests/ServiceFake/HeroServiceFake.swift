@@ -25,7 +25,7 @@ class HeroServiceFake: HeroService {
     private func jsonToHeroes(json: String) throws -> [Hero] {
         let decoder = JSONDecoder()
         let data = json.data(using: .utf8)!
-        var heroes: [Hero] = try decoder.decode([HeroDto].self, from: data).map { heroDto in heroDto.toHero() }
+        let heroes: [Hero] = try decoder.decode([HeroDto].self, from: data).map { heroDto in heroDto.toHero() }
         return heroes
     }
 
