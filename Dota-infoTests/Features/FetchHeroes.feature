@@ -1,10 +1,9 @@
-Feature: Fetch Dota Heroes
+Feature: Fetch Heroes
 
- Scenario Outline: Fetch Heroes
+ Scenario Outline: As a user, i want to get the full list of heroes
 
     Given the user ask for a list of heroes
-    When he fetches data from API
-    And API responds with "<api_response>"
+    When API responds with "<api_response>"
     Then result should be "<result>"
 
     Examples:
