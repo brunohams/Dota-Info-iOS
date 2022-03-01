@@ -1,5 +1,6 @@
-@testable import Core
-@testable import Domain
+@testable import Common
+@testable import Hero_Domain
+@testable import Shared_Domain
 
 struct GetHeroesKey: InjectionKey {
     typealias Value = GetHeroes

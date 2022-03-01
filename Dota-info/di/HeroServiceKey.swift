@@ -1,6 +1,6 @@
-@testable import Core
-@testable import Domain
-@testable import DataSource
+@testable import Common
+@testable import Hero_Domain
+@testable import Hero_Data
 
 struct HeroServiceKey: InjectionKey {
     typealias Value = HeroService

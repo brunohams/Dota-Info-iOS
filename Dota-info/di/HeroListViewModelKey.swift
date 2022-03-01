@@ -1,4 +1,5 @@
-@testable import Core
+@testable import Common
+@testable import Hero_Presentation
 
 struct HeroListViewModelKey: InjectionKey {
     typealias Value = HeroListViewModel

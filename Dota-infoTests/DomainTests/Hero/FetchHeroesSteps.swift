@@ -2,9 +2,10 @@ import Foundation
 import Cucumberish
 import XCTest
 import RxBlocking
-@testable import Domain
-@testable import DataSource
-@testable import Core
+@testable import Hero_Domain
+@testable import Hero_Data
+@testable import UICore
+@testable import Shared_Domain
 
 class FetchHeroesSteps: BaseSteps {
 

@@ -1,5 +1,5 @@
-@testable import Core
-@testable import Domain
+@testable import Common
+@testable import Shared_Domain
 
 struct LoggerFactoryKey: InjectionKey {
     typealias Value = LoggerFactory
