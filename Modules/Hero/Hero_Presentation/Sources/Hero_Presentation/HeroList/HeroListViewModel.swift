@@ -10,7 +10,7 @@ class HeroListViewModel: ObservableObject, GetHeroesOutput {
 
     init (getHeroes: GetHeroes) {
         self.getHeroes = getHeroes
-        
+                
         getHeroes.execute(output: self)
     }
 

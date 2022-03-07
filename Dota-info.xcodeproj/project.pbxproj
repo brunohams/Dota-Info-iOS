@@ -30,6 +30,9 @@
 		85A90E4C27CD65C400FB8916 /* Hero_Domain in Resources */ = {isa = PBXBuildFile; fileRef = 85A90E4927CD65C400FB8916 /* Hero_Domain */; };
 		85A90E4D27CD65C400FB8916 /* Hero_Data in Resources */ = {isa = PBXBuildFile; fileRef = 85A90E4A27CD65C400FB8916 /* Hero_Data */; };
 		85A90E5327CD66D500FB8916 /* Hero_Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 85A90E5227CD66D500FB8916 /* Hero_Presentation */; };
+		85CBE22A27D672E200959E5C /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE22927D672E200959E5C /* InjectedValues.swift */; };
+		85CBE22B27D672E200959E5C /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE22827D672E200959E5C /* InjectionKey.swift */; };
+		85CBE22D27D672E600959E5C /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE22C27D672E600959E5C /* Injected.swift */; };
 		85F5A16A27CD2CCE004639E0 /* BaseSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5A16927CD2CCE004639E0 /* BaseSteps.swift */; };
 		BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */; };
 		BE6AADDFC93479F222CAD8EF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BE6AA2968041C6B18F2E64F9 /* README.md */; };
@@ -71,6 +74,9 @@
 		85A90E4927CD65C400FB8916 /* Hero_Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Hero_Domain; sourceTree = "<group>"; };
 		85A90E4A27CD65C400FB8916 /* Hero_Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Hero_Data; sourceTree = "<group>"; };
 		85B98DBA27CD72F8005FB855 /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Common; sourceTree = "<group>"; };
+		85CBE22827D672E200959E5C /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		85CBE22927D672E200959E5C /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
+		85CBE22C27D672E600959E5C /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		85F5A16927CD2CCE004639E0 /* BaseSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSteps.swift; sourceTree = "<group>"; };
 		BE6AA2968041C6B18F2E64F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.me; path = README.md; sourceTree = "<group>"; };
 		BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListViewModelKey.swift; sourceTree = "<group>"; };
@@ -143,7 +149,7 @@
 				853EADBA279992ED00265B7E /* Assets.xcassets */,
 				853EADBC279992ED00265B7E /* Preview Content */,
 				BE6AA26D6F1B482E141C7DFA /* Presentation */,
-				BE6AA399C03956C272CA4E96 /* di */,
+				BE6AA399C03956C272CA4E96 /* DependencyInjection */,
 			);
 			path = "Dota-info";
 			sourceTree = "<group>";
@@ -245,6 +251,17 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		85CBE22527D672C900959E5C /* ServiceKey */ = {
+			isa = PBXGroup;
+			children = (
+				BE6AA4650BCA41651A5DC842 /* HeroServiceKey.swift */,
+				BE6AA7CC84FD1C3522C58A14 /* LoggerFactoryKey.swift */,
+				BE6AADEE9E9257EA1CAFF351 /* GetHeroesKey.swift */,
+				BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */,
+			);
+			path = ServiceKey;
+			sourceTree = "<group>";
+		};
 		85F5A16827CD2CC0004639E0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,15 +278,15 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		BE6AA399C03956C272CA4E96 /* di */ = {
+		BE6AA399C03956C272CA4E96 /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
-				BE6AA4650BCA41651A5DC842 /* HeroServiceKey.swift */,
-				BE6AA7CC84FD1C3522C58A14 /* LoggerFactoryKey.swift */,
-				BE6AADEE9E9257EA1CAFF351 /* GetHeroesKey.swift */,
-				BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */,
+				85CBE22C27D672E600959E5C /* Injected.swift */,
+				85CBE22927D672E200959E5C /* InjectedValues.swift */,
+				85CBE22827D672E200959E5C /* InjectionKey.swift */,
+				85CBE22527D672C900959E5C /* ServiceKey */,
 			);
-			path = di;
+			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,8 +444,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */,
+				85CBE22B27D672E200959E5C /* InjectionKey.swift in Sources */,
+				85CBE22D27D672E600959E5C /* Injected.swift in Sources */,
 				854B332A27C9120A00F61095 /* HeroServiceKey.swift in Sources */,
 				854B332C27C9120A00F61095 /* HeroListViewModelKey.swift in Sources */,
+				85CBE22A27D672E200959E5C /* InjectedValues.swift in Sources */,
 				854B332D27C9120A00F61095 /* LoggerFactoryKey.swift in Sources */,
 				854B332B27C9120A00F61095 /* GetHeroesKey.swift in Sources */,
 			);
