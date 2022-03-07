@@ -12,39 +12,31 @@ class GetHeroes {
         self.logger = loggerFactory.createLogger(tag: "GetHeroes")
     }
 
-    func execute() -> Observable<DataState<[Hero]>> {
-        
-        return Observable<DataState<[Hero]>>.create { [weak self] observer in
-
-            DispatchQueue.global(qos: .background).async( execute: {
-
-                guard let self = self else { return }
-
-                observer.onNext(DataState<[Hero]>.progress(.loading))  // Emit LOADING
-
-                do {
-                    
-                    let heroes: [Hero] = try self.heroService.getHeroStats()
-                    observer.onNext(DataState<[Hero]>.data(heroes))  // --> Emit Data
-                    
-                } catch {
-                    
-                    self.logger.log(message: error.localizedDescription)
-
-                    let errorDialog = self.createNetworkErrorDialog(for: error)
-                    observer.onNext(DataState<[Hero]>.response(uiComponent: errorDialog))  // --> Emit Error
-                    
-                }
-
-                observer.onNext(DataState<[Hero]>.progress(.idle))  // --> Emit Idle
-                observer.onCompleted()
+    func execute(output: GetHeroesOutput) {
                 
-            })
+        DispatchQueue.global(qos: .background).async( execute: {
+            
+            output.didGetProgress(progress: .loading)   // Emit LOADING
+            sleep(3)
+            
+            do {
+                
+                let heroes: [Hero] = try self.heroService.getHeroStats()
+                output.didGetHeroes(heroes: heroes) // --> Emit Data
+                
+            } catch {
+                
+                self.logger.log(message: error.localizedDescription)
 
-            return Disposables.create()
+                let errorDialog = self.createNetworkErrorDialog(for: error)
+                output.didGetError(uiComponent: errorDialog)  // --> Emit Error
+                 
+            }
 
-        }.observe(on: SerialDispatchQueueScheduler(qos: .background))
-
+            output.didGetProgress(progress: .idle)  // --> Emit Idle
+            
+        })
+        
     }
 
     private func createNetworkErrorDialog(for error: Error) -> UIComponent.Dialog {

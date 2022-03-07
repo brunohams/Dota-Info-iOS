@@ -142,7 +142,7 @@
 			children = (
 				853EADBA279992ED00265B7E /* Assets.xcassets */,
 				853EADBC279992ED00265B7E /* Preview Content */,
-				BE6AA26D6F1B482E141C7DFA /* presentation */,
+				BE6AA26D6F1B482E141C7DFA /* Presentation */,
 				BE6AA399C03956C272CA4E96 /* di */,
 			);
 			path = "Dota-info";
@@ -253,12 +253,12 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		BE6AA26D6F1B482E141C7DFA /* presentation */ = {
+		BE6AA26D6F1B482E141C7DFA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */,
 			);
-			path = presentation;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		BE6AA399C03956C272CA4E96 /* di */ = {

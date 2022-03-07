@@ -1,65 +1,48 @@
 import Foundation
-import RxSwift
 @testable import Shared_Domain
 @testable import Hero_Domain
 
-class HeroListViewModel: ObservableObject {
-
+class HeroListViewModel: ObservableObject, GetHeroesOutput {
+    
     @Published var state: HeroListState = HeroListState()
 
     let getHeroes: GetHeroes
-    let logger: Logger
 
-    init (getHeroes: GetHeroes, loggerFactory: LoggerFactory) {
+    init (getHeroes: GetHeroes) {
         self.getHeroes = getHeroes
-        self.logger = loggerFactory.createLogger(tag: "HeroListViewModel")
-
-        getHeroesList()
+        
+        getHeroes.execute(output: self)
     }
 
-    func getHeroesList() {
-        getHeroes.execute()
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { state in
-                switch (state) {
-                    case .response(let uiComponent):
-                        self.handleResponseState(uiComponent: uiComponent)
-                    case .data(let data):
-                        self.updateDataState(data: data)
-                    case .progress(let progressState):
-                        self.updateProgressState(progress: progressState)
-                }
-            })
+    func didGetHeroes(heroes: [Hero]) {
+        state.heroes = heroes
     }
-
-    func handleResponseState(uiComponent: UIComponent) {
+    
+    func didGetError(uiComponent: UIComponent) {
         switch (uiComponent) {
             case let dialog as UIComponent.Dialog:
                 show(dialog: dialog)
                 return
 
-            case let none as UIComponent.None:
-                logger.log(message: none.message)
-                return
-
             default: return
         }
     }
-
-    func updateDataState(data: [Hero]?) {
-        guard let data = data else { return }
-        state.heroes = data
-        state = state
-    }
-
-    func updateProgressState(progress: ProgressState) {
+    
+    func didGetProgress(progress: ProgressState) {
         state.progressBar = progress
-        state = state
+        updateState()
     }
 
-    func show(dialog: UIComponent.Dialog) {
+    private func show(dialog: UIComponent.Dialog) {
         state.dialog = dialog
-        state = state
+        updateState()
+    }
+    
+    /// Force update state
+    private func updateState() {
+        DispatchQueue.main.async() {
+            self.state = self.state
+        }
     }
 
 }

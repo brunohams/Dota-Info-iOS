@@ -86,9 +86,9 @@ struct HeroDto: Codable {
         return Hero(
             id: id,
             localizedName: localizedName,
-            primaryAtribute: HeroAttribute.getHeroAttribute(fromValue: primaryAttr),
-            attackType: HeroAttackType.getHeroAttackType(fromValue: attackType),
-            role: roles.map { role in HeroRole.getHeroRole(fromValue: role) },
+            primaryAtribute: getHeroAttribute(fromValue: primaryAttr),
+            attackType: getHeroAttackType(fromValue: attackType),
+            role: roles.map { role in getHeroRole(fromValue: role) },
             img: img,
             icon: icon,
             baseHealth: baseHealth,
@@ -130,6 +130,56 @@ struct HeroDto: Codable {
             eighthWin: the8_Win
         )
     }
+    
+    private func getHeroRole(fromValue value: String) -> HeroRole {
+        switch (value) {
+            case "Carry":
+                return HeroRole.carry(HeroRole.Carry())
+            case "Escape":
+                return HeroRole.escape(HeroRole.Escape())
+            case "Nuker":
+                return HeroRole.nuker(HeroRole.Nuker())
+            case "Initiator":
+                return HeroRole.initiator(HeroRole.Initiator())
+            case "Durable":
+                return HeroRole.durable(HeroRole.Durable())
+            case "Disabler":
+                return HeroRole.disabler(HeroRole.Disabler())
+            case "Jungler":
+                return HeroRole.jungler(HeroRole.Jungler())
+            case "Support":
+                return HeroRole.support(HeroRole.Support())
+            case "Pusher":
+                return HeroRole.pusher(HeroRole.Pusher())
+            default:
+                return HeroRole.unknown(HeroRole.Unknown())
+        }
+    }
+    
+    private func getHeroAttribute(fromValue value: String) -> HeroAttribute {
+        switch value {
+            case "agi":
+                return HeroAttribute.agility(HeroAttribute.Agility())
+            case "int":
+                return HeroAttribute.intelligence(HeroAttribute.Intelligence())
+            case "str":
+                return HeroAttribute.strength(HeroAttribute.Strength())
+            default:
+                return HeroAttribute.unknown(HeroAttribute.Unknown())
+        }
+    }
+    
+    private func getHeroAttackType(fromValue value: String) -> HeroAttackType {
+        switch value {
+            case "Melee":
+                return HeroAttackType.melee(HeroAttackType.Melee())
+            case "Ranged":
+                return HeroAttackType.ranged(HeroAttackType.Ranged())
+            default:
+                return HeroAttackType.unknown(HeroAttackType.Unknown())
+        }
 
+    }
+    
 }
 

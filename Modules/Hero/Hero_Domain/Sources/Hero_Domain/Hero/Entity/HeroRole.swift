@@ -53,30 +53,4 @@ enum HeroRole {
     case pusher(Pusher)
     case unknown(Unknown)
 
-
-    static func getHeroRole(fromValue value: String) -> HeroRole {
-        switch (value) {
-            case "Carry":
-                return HeroRole.carry(HeroRole.Carry())
-            case "Escape":
-                return HeroRole.escape(HeroRole.Escape())
-            case "Nuker":
-                return HeroRole.nuker(HeroRole.Nuker())
-            case "Initiator":
-                return HeroRole.initiator(HeroRole.Initiator())
-            case "Durable":
-                return HeroRole.durable(HeroRole.Durable())
-            case "Disabler":
-                return HeroRole.disabler(HeroRole.Disabler())
-            case "Jungler":
-                return HeroRole.jungler(HeroRole.Jungler())
-            case "Support":
-                return HeroRole.support(HeroRole.Support())
-            case "Pusher":
-                return HeroRole.pusher(HeroRole.Pusher())
-            default:
-                return HeroRole.unknown(HeroRole.Unknown())
-        }
-    }
-
 }
