@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85018F8B27D793370093C215 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85018F8A27D793370093C215 /* ReSwift */; };
+		85018F9527D7A3F10093C215 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85018F9427D7A3F10093C215 /* GoogleService-Info.plist */; };
+		85018F9827D7AD130093C215 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 85018F9727D7AD130093C215 /* FirebaseAnalytics */; };
+		85018F9A27D7AD130093C215 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 85018F9927D7AD130093C215 /* FirebaseCrashlytics */; };
+		85018F9C27D7AD130093C215 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 85018F9B27D7AD130093C215 /* FirebasePerformance */; };
+		85018F9E27D7AE1B0093C215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85018F9D27D7AE1B0093C215 /* AppDelegate.swift */; };
+		85018FA127D7D1ED0093C215 /* HeroListViewKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85018FA027D7D1ED0093C215 /* HeroListViewKey.swift */; };
 		851F925027CD752800CCC5DD /* Shared_Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 851F924F27CD752800CCC5DD /* Shared_Domain */; };
 		851F925227CD752E00CCC5DD /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 851F925127CD752E00CCC5DD /* Common */; };
 		853EADBB279992ED00265B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBA279992ED00265B7E /* Assets.xcassets */; };
@@ -20,7 +27,6 @@
 		85435DFD27CD28EE00621380 /* CucumberishInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85435DFB27CD28EE00621380 /* CucumberishInitializer.swift */; };
 		85435DFE27CD28EE00621380 /* CucumberishLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 85435DFA27CD28EE00621380 /* CucumberishLoader.m */; };
 		854B332A27C9120A00F61095 /* HeroServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA4650BCA41651A5DC842 /* HeroServiceKey.swift */; };
-		854B332B27C9120A00F61095 /* GetHeroesKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AADEE9E9257EA1CAFF351 /* GetHeroesKey.swift */; };
 		854B332C27C9120A00F61095 /* HeroListViewModelKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */; };
 		854B332D27C9120A00F61095 /* LoggerFactoryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7CC84FD1C3522C58A14 /* LoggerFactoryKey.swift */; };
 		854B333227C9195D00F61095 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 854B333127C9195D00F61095 /* RxBlocking */; };
@@ -56,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85018F9427D7A3F10093C215 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		85018F9D27D7AE1B0093C215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		85018FA027D7D1ED0093C215 /* HeroListViewKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewKey.swift; sourceTree = "<group>"; };
 		851F924E27CD746C00CCC5DD /* Shared_Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared_Domain; sourceTree = "<group>"; };
 		853EADB3279992EC00265B7E /* Dota-info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota-info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		853EADBA279992ED00265B7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,7 +92,6 @@
 		BE6AA4650BCA41651A5DC842 /* HeroServiceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceKey.swift; sourceTree = "<group>"; };
 		BE6AA7CC84FD1C3522C58A14 /* LoggerFactoryKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerFactoryKey.swift; sourceTree = "<group>"; };
 		BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dota_infoApp.swift; sourceTree = "<group>"; };
-		BE6AADEE9E9257EA1CAFF351 /* GetHeroesKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHeroesKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +101,12 @@
 			files = (
 				85A90E5327CD66D500FB8916 /* Hero_Presentation in Frameworks */,
 				8564485027CD70D8005D8102 /* UICore in Frameworks */,
+				85018F9C27D7AD130093C215 /* FirebasePerformance in Frameworks */,
+				85018F9827D7AD130093C215 /* FirebaseAnalytics in Frameworks */,
 				854B333227C9195D00F61095 /* RxBlocking in Frameworks */,
+				85018F8B27D793370093C215 /* ReSwift in Frameworks */,
 				854B333427C9195D00F61095 /* RxSwift in Frameworks */,
+				85018F9A27D7AD130093C215 /* FirebaseCrashlytics in Frameworks */,
 				851F925027CD752800CCC5DD /* Shared_Domain in Frameworks */,
 				851F925227CD752E00CCC5DD /* Common in Frameworks */,
 			);
@@ -122,7 +134,6 @@
 		853EADAA279992EC00265B7E = {
 			isa = PBXGroup;
 			children = (
-				85B98DB627CD712D005FB855 /* Packages */,
 				85A90E4627CD65C400FB8916 /* Modules */,
 				853EADB5279992EC00265B7E /* Dota-info */,
 				853EADC6279992ED00265B7E /* Dota-infoTests */,
@@ -147,9 +158,11 @@
 			isa = PBXGroup;
 			children = (
 				853EADBA279992ED00265B7E /* Assets.xcassets */,
+				85018F9427D7A3F10093C215 /* GoogleService-Info.plist */,
 				853EADBC279992ED00265B7E /* Preview Content */,
 				BE6AA26D6F1B482E141C7DFA /* Presentation */,
 				BE6AA399C03956C272CA4E96 /* DependencyInjection */,
+				85018F9D27D7AE1B0093C215 /* AppDelegate.swift */,
 			);
 			path = "Dota-info";
 			sourceTree = "<group>";
@@ -234,13 +247,6 @@
 			path = Hero;
 			sourceTree = "<group>";
 		};
-		85B98DB627CD712D005FB855 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		85B98DB927CD72A3005FB855 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,8 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				BE6AA4650BCA41651A5DC842 /* HeroServiceKey.swift */,
+				85018FA027D7D1ED0093C215 /* HeroListViewKey.swift */,
 				BE6AA7CC84FD1C3522C58A14 /* LoggerFactoryKey.swift */,
-				BE6AADEE9E9257EA1CAFF351 /* GetHeroesKey.swift */,
 				BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */,
 			);
 			path = ServiceKey;
@@ -299,6 +305,7 @@
 				853EADAF279992EC00265B7E /* Sources */,
 				853EADB0279992EC00265B7E /* Frameworks */,
 				853EADB1279992EC00265B7E /* Resources */,
+				85018F9F27D7B4120093C215 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -312,6 +319,10 @@
 				8564484F27CD70D8005D8102 /* UICore */,
 				851F924F27CD752800CCC5DD /* Shared_Domain */,
 				851F925127CD752E00CCC5DD /* Common */,
+				85018F8A27D793370093C215 /* ReSwift */,
+				85018F9727D7AD130093C215 /* FirebaseAnalytics */,
+				85018F9927D7AD130093C215 /* FirebaseCrashlytics */,
+				85018F9B27D7AD130093C215 /* FirebasePerformance */,
 			);
 			productName = "Dota-info";
 			productReference = 853EADB3279992EC00265B7E /* Dota-info.app */;
@@ -395,6 +406,8 @@
 			packageReferences = (
 				854B333027C9195D00F61095 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish" */,
+				85018F8927D793370093C215 /* XCRemoteSwiftPackageReference "ReSwift" */,
+				85018F9627D7AD130093C215 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 853EADB4279992EC00265B7E /* Products */;
 			projectDirPath = "";
@@ -418,6 +431,7 @@
 				85A90E4C27CD65C400FB8916 /* Hero_Domain in Resources */,
 				85A90E4B27CD65C400FB8916 /* Hero_Presentation in Resources */,
 				BE6AADDFC93479F222CAD8EF /* README.md in Resources */,
+				85018F9527D7A3F10093C215 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +452,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85018F9F27D7B4120093C215 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${BUILD_DIR%Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		853EADAF279992EC00265B7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -446,11 +482,12 @@
 				BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */,
 				85CBE22B27D672E200959E5C /* InjectionKey.swift in Sources */,
 				85CBE22D27D672E600959E5C /* Injected.swift in Sources */,
+				85018F9E27D7AE1B0093C215 /* AppDelegate.swift in Sources */,
+				85018FA127D7D1ED0093C215 /* HeroListViewKey.swift in Sources */,
 				854B332A27C9120A00F61095 /* HeroServiceKey.swift in Sources */,
 				854B332C27C9120A00F61095 /* HeroListViewModelKey.swift in Sources */,
 				85CBE22A27D672E200959E5C /* InjectedValues.swift in Sources */,
 				854B332D27C9120A00F61095 /* LoggerFactoryKey.swift in Sources */,
-				854B332B27C9120A00F61095 /* GetHeroesKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +652,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Dota-info/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = NO;
@@ -819,6 +857,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		85018F8927D793370093C215 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		85018F9627D7AD130093C215 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Ahmed-Ali/Cucumberish.git";
@@ -838,6 +892,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		85018F8A27D793370093C215 /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85018F8927D793370093C215 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
+		85018F9727D7AD130093C215 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85018F9627D7AD130093C215 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		85018F9927D7AD130093C215 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85018F9627D7AD130093C215 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		85018F9B27D7AD130093C215 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85018F9627D7AD130093C215 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
 		851F924F27CD752800CCC5DD /* Shared_Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Shared_Domain;

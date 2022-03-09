@@ -13,7 +13,7 @@ final class Hero_PresentationTests: XCTestCase {
         
         let loggerFactory = LoggerDebugFactory()
         var heroService = HeroServiceFake(responseType: .goodData)
-        var getHeroes = GetHeroes(heroService: heroService, loggerFactory: loggerFactory)
+        var getHeroes = GetHeroesUseCase(heroService: heroService, loggerFactory: loggerFactory)
         
         let viewModel = HeroListViewModel(getHeroes: getHeroes, loggerFactory: loggerFactory)
         

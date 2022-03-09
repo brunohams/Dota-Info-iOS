@@ -2,8 +2,10 @@ import Foundation
 import RxSwift
 @testable import Shared_Domain
 
-protocol GetHeroesOutput: ErrorOutput, ProgressOutput {
-    
-    func didGetHeroes(heroes: [Hero])
-    
+protocol GetHeroesOutput {
+//    func didReceiveObservable(observable: Observable<DataState<[Hero]>>)
+
+    func didReceive(heroes: [Hero])
+    func didReceive(error: ErrorDetail)
+    func didReceive(progress: ProgressState)
 }

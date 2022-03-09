@@ -3,9 +3,7 @@
 
 struct HeroListViewModelKey: InjectionKey {
     typealias Value = HeroListViewModel
-    static var currentValue: HeroListViewModel = HeroListViewModel(
-            getHeroes: GetHeroesKey.currentValue
-    )
+    static var currentValue: HeroListViewModel = HeroListViewModel()
 }
 
 extension InjectedValues {

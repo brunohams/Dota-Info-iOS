@@ -4,7 +4,7 @@
 
 struct HeroServiceKey: InjectionKey {
     typealias Value = HeroService
-    static var currentValue: HeroService = HeroServiceFake.init(responseType: .goodData)
+    static var currentValue: HeroService = HeroServiceImpl()
 }
 
 extension InjectedValues {
