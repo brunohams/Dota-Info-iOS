@@ -1,4 +1,4 @@
-@testable import Common
+@testable import UICore
 @testable import Hero_Domain
 @testable import Hero_Data
 

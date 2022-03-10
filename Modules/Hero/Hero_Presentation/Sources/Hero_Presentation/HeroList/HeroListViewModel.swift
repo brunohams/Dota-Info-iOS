@@ -7,32 +7,29 @@ import ReSwift
 
 class HeroListViewModel: ObservableObject, GetHeroesOutput, StoreSubscriber {
 
-    typealias StoreSubscriberStateType = AppState
     private var disposeBag = DisposeBag()
 
     @Published var state: HeroListState = HeroListState()
 
     init() {
-        store.subscribe(self)
+        HeroStore.shared.subscribe(self)
     }
     
-    func newState(state: AppState) {
+    func newState(state: HeroState) {
         self.state = state.heroListState
     }
 
     func didReceive(heroes: [Hero]) {
-        store.dispatch(ReceiveHeroesAction(heroes: heroes))
+        HeroStore.shared.dispatch(ReceiveHeroesAction(heroes: heroes))
     }
 
     func didReceive(error: ErrorDetail) {
-        store.dispatch(ReceiveErrorAction(error: error))
+        HeroStore.shared.dispatch(ReceiveErrorAction(error: error))
     }
 
     func didReceive(progress: ProgressState) {
-        store.dispatch(ReceiveProgressAction(progress: progress))
+        HeroStore.shared.dispatch(ReceiveProgressAction(progress: progress))
     }
-
-
 
 //    func didReceiveObservable(observable: Observable<DataState<[Hero]>>) {
 //        observable

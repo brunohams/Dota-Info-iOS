@@ -1,22 +1,5 @@
-import ReSwift
-@testable import Hero_Domain
-@testable import Shared_Domain
+import Foundation
 
-struct AppState {
-    var heroListState: HeroListState = HeroListState()
+class AppState: ObservableObject {
+    var numberOfErrors: Int = 0
 }
-
-
-
-func appReducer(action: Action, state: AppState?) -> AppState {
-    return AppState(
-        heroListState: heroListReducer(action, state: state?.heroListState)
-    )
-}
-
-let store = Store(
-    reducer: appReducer,
-    state: AppState(),
-    middleware: [] // Maybe put an action logger?
-)
-

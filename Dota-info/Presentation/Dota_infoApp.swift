@@ -1,5 +1,5 @@
 import SwiftUI
-@testable import Common
+@testable import UICore
 @testable import Hero_Domain
 @testable import Hero_Presentation
 
@@ -10,7 +10,10 @@ struct Dota_infoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            heroListView
+            VStack {
+                AppHeaderView(viewModel: AppHeaderViewModel())
+                heroListView
+            }
         }
     }
 }

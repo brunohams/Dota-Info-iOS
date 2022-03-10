@@ -6,15 +6,17 @@ import SwiftUI
 struct HeroListView: View {
 
     @ObservedObject var viewModel: HeroListViewModel
-    let actions: HeroListActions
+    let getHeroesUseCase: GetHeroesUseCase
     
     @State private var showingConfirmation = true
 
-    init(viewModel: HeroListViewModel, actions: HeroListActions) {
+    init(viewModel: HeroListViewModel, getHeroesUseCase: GetHeroesUseCase) {
         self.viewModel = viewModel
-        self.actions = actions
+        self.getHeroesUseCase = getHeroesUseCase
         
-        store.dispatch(actions.requestHeroes)
+        HeroStore.shared.dispatch(
+            RequestHeroesAction(useCase: getHeroesUseCase)
+        )
     }
     
     var body: some View {
@@ -26,10 +28,17 @@ struct HeroListView: View {
                 HeroRow(hero: hero)
             }
             Button("Reload again", role: .none) {
-                store.dispatch(actions.requestHeroes)
+                HeroStore.shared.dispatch(
+                    RequestHeroesAction(useCase: getHeroesUseCase)
+                )
             }
             Button("Throw dummy error", role: .destructive) {
-                store.dispatch(actions.throwDummyError)
+                HeroStore.shared.dispatch(
+                    ThrowDummyErrorAction()
+                )
+                AppStore.shared.dispatch(
+                    IncreaseErrorQuantityAction()
+                )
             }
         }
 
@@ -37,7 +46,9 @@ struct HeroListView: View {
             Text("")
                 .alert(dialog.title, isPresented: $showingConfirmation) {
                     Button("Ok", role: .none) {
-                        store.dispatch(actions.dismissDialog)
+                        HeroStore.shared.dispatch(
+                            DismissDialogAction()
+                        )
                         showingConfirmation = true
                     }
                 } message: {

@@ -13,7 +13,6 @@
 		85018F9A27D7AD130093C215 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 85018F9927D7AD130093C215 /* FirebaseCrashlytics */; };
 		85018F9C27D7AD130093C215 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 85018F9B27D7AD130093C215 /* FirebasePerformance */; };
 		85018F9E27D7AE1B0093C215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85018F9D27D7AE1B0093C215 /* AppDelegate.swift */; };
-		85018FA127D7D1ED0093C215 /* HeroListViewKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85018FA027D7D1ED0093C215 /* HeroListViewKey.swift */; };
 		851F925027CD752800CCC5DD /* Shared_Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 851F924F27CD752800CCC5DD /* Shared_Domain */; };
 		851F925227CD752E00CCC5DD /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 851F925127CD752E00CCC5DD /* Common */; };
 		853EADBB279992ED00265B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853EADBA279992ED00265B7E /* Assets.xcassets */; };
@@ -26,9 +25,6 @@
 		85435DF927CD286600621380 /* Features in Resources */ = {isa = PBXBuildFile; fileRef = 85435DF827CD286600621380 /* Features */; };
 		85435DFD27CD28EE00621380 /* CucumberishInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85435DFB27CD28EE00621380 /* CucumberishInitializer.swift */; };
 		85435DFE27CD28EE00621380 /* CucumberishLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 85435DFA27CD28EE00621380 /* CucumberishLoader.m */; };
-		854B332A27C9120A00F61095 /* HeroServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA4650BCA41651A5DC842 /* HeroServiceKey.swift */; };
-		854B332C27C9120A00F61095 /* HeroListViewModelKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */; };
-		854B332D27C9120A00F61095 /* LoggerFactoryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA7CC84FD1C3522C58A14 /* LoggerFactoryKey.swift */; };
 		854B333227C9195D00F61095 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 854B333127C9195D00F61095 /* RxBlocking */; };
 		854B333427C9195D00F61095 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 854B333327C9195D00F61095 /* RxSwift */; };
 		8564485027CD70D8005D8102 /* UICore in Frameworks */ = {isa = PBXBuildFile; productRef = 8564484F27CD70D8005D8102 /* UICore */; };
@@ -36,11 +32,10 @@
 		85A90E4C27CD65C400FB8916 /* Hero_Domain in Resources */ = {isa = PBXBuildFile; fileRef = 85A90E4927CD65C400FB8916 /* Hero_Domain */; };
 		85A90E4D27CD65C400FB8916 /* Hero_Data in Resources */ = {isa = PBXBuildFile; fileRef = 85A90E4A27CD65C400FB8916 /* Hero_Data */; };
 		85A90E5327CD66D500FB8916 /* Hero_Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 85A90E5227CD66D500FB8916 /* Hero_Presentation */; };
-		85CBE22A27D672E200959E5C /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE22927D672E200959E5C /* InjectedValues.swift */; };
-		85CBE22B27D672E200959E5C /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE22827D672E200959E5C /* InjectionKey.swift */; };
-		85CBE22D27D672E600959E5C /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CBE22C27D672E600959E5C /* Injected.swift */; };
 		85F5A16A27CD2CCE004639E0 /* BaseSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5A16927CD2CCE004639E0 /* BaseSteps.swift */; };
 		BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */; };
+		BE6AA54A144BF26623880D03 /* AppHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3B221BF7F9EA8802B71 /* AppHeaderViewModel.swift */; };
+		BE6AA89697106000ED61693D /* AppHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AACF0A2F28730EE56F0E4 /* AppHeaderView.swift */; };
 		BE6AADDFC93479F222CAD8EF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BE6AA2968041C6B18F2E64F9 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +59,6 @@
 /* Begin PBXFileReference section */
 		85018F9427D7A3F10093C215 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		85018F9D27D7AE1B0093C215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85018FA027D7D1ED0093C215 /* HeroListViewKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewKey.swift; sourceTree = "<group>"; };
 		851F924E27CD746C00CCC5DD /* Shared_Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared_Domain; sourceTree = "<group>"; };
 		853EADB3279992EC00265B7E /* Dota-info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dota-info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		853EADBA279992ED00265B7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,15 +77,11 @@
 		85A90E4927CD65C400FB8916 /* Hero_Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Hero_Domain; sourceTree = "<group>"; };
 		85A90E4A27CD65C400FB8916 /* Hero_Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Hero_Data; sourceTree = "<group>"; };
 		85B98DBA27CD72F8005FB855 /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Common; sourceTree = "<group>"; };
-		85CBE22827D672E200959E5C /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
-		85CBE22927D672E200959E5C /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
-		85CBE22C27D672E600959E5C /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		85F5A16927CD2CCE004639E0 /* BaseSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSteps.swift; sourceTree = "<group>"; };
 		BE6AA2968041C6B18F2E64F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.me; path = README.md; sourceTree = "<group>"; };
-		BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroListViewModelKey.swift; sourceTree = "<group>"; };
-		BE6AA4650BCA41651A5DC842 /* HeroServiceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroServiceKey.swift; sourceTree = "<group>"; };
-		BE6AA7CC84FD1C3522C58A14 /* LoggerFactoryKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerFactoryKey.swift; sourceTree = "<group>"; };
+		BE6AA3B221BF7F9EA8802B71 /* AppHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHeaderViewModel.swift; sourceTree = "<group>"; };
 		BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dota_infoApp.swift; sourceTree = "<group>"; };
+		BE6AACF0A2F28730EE56F0E4 /* AppHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +151,6 @@
 				85018F9427D7A3F10093C215 /* GoogleService-Info.plist */,
 				853EADBC279992ED00265B7E /* Preview Content */,
 				BE6AA26D6F1B482E141C7DFA /* Presentation */,
-				BE6AA399C03956C272CA4E96 /* DependencyInjection */,
 				85018F9D27D7AE1B0093C215 /* AppDelegate.swift */,
 			);
 			path = "Dota-info";
@@ -257,17 +246,6 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		85CBE22527D672C900959E5C /* ServiceKey */ = {
-			isa = PBXGroup;
-			children = (
-				BE6AA4650BCA41651A5DC842 /* HeroServiceKey.swift */,
-				85018FA027D7D1ED0093C215 /* HeroListViewKey.swift */,
-				BE6AA7CC84FD1C3522C58A14 /* LoggerFactoryKey.swift */,
-				BE6AA45590BF59C526577910 /* HeroListViewModelKey.swift */,
-			);
-			path = ServiceKey;
-			sourceTree = "<group>";
-		};
 		85F5A16827CD2CC0004639E0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,19 +258,10 @@
 			isa = PBXGroup;
 			children = (
 				BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */,
+				BE6AACF0A2F28730EE56F0E4 /* AppHeaderView.swift */,
+				BE6AA3B221BF7F9EA8802B71 /* AppHeaderViewModel.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		BE6AA399C03956C272CA4E96 /* DependencyInjection */ = {
-			isa = PBXGroup;
-			children = (
-				85CBE22C27D672E600959E5C /* Injected.swift */,
-				85CBE22927D672E200959E5C /* InjectedValues.swift */,
-				85CBE22827D672E200959E5C /* InjectionKey.swift */,
-				85CBE22527D672C900959E5C /* ServiceKey */,
-			);
-			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,9 +373,9 @@
 			);
 			mainGroup = 853EADAA279992EC00265B7E;
 			packageReferences = (
-				854B333027C9195D00F61095 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish" */,
-				85018F8927D793370093C215 /* XCRemoteSwiftPackageReference "ReSwift" */,
+				854B333027C9195D00F61095 /* XCRemoteSwiftPackageReference "RxSwift.git" */,
+				85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish.git" */,
+				85018F8927D793370093C215 /* XCRemoteSwiftPackageReference "ReSwift.git" */,
 				85018F9627D7AD130093C215 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 853EADB4279992EC00265B7E /* Products */;
@@ -480,14 +449,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */,
-				85CBE22B27D672E200959E5C /* InjectionKey.swift in Sources */,
-				85CBE22D27D672E600959E5C /* Injected.swift in Sources */,
 				85018F9E27D7AE1B0093C215 /* AppDelegate.swift in Sources */,
-				85018FA127D7D1ED0093C215 /* HeroListViewKey.swift in Sources */,
-				854B332A27C9120A00F61095 /* HeroServiceKey.swift in Sources */,
-				854B332C27C9120A00F61095 /* HeroListViewModelKey.swift in Sources */,
-				85CBE22A27D672E200959E5C /* InjectedValues.swift in Sources */,
-				854B332D27C9120A00F61095 /* LoggerFactoryKey.swift in Sources */,
+				BE6AA89697106000ED61693D /* AppHeaderView.swift in Sources */,
+				BE6AA54A144BF26623880D03 /* AppHeaderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,7 +821,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		85018F8927D793370093C215 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+		85018F8927D793370093C215 /* XCRemoteSwiftPackageReference "ReSwift.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReSwift/ReSwift.git";
 			requirement = {
@@ -873,7 +837,7 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish" */ = {
+		85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Ahmed-Ali/Cucumberish.git";
 			requirement = {
@@ -881,7 +845,7 @@
 				kind = branch;
 			};
 		};
-		854B333027C9195D00F61095 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		854B333027C9195D00F61095 /* XCRemoteSwiftPackageReference "RxSwift.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
@@ -894,7 +858,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		85018F8A27D793370093C215 /* ReSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 85018F8927D793370093C215 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			package = 85018F8927D793370093C215 /* XCRemoteSwiftPackageReference "ReSwift.git" */;
 			productName = ReSwift;
 		};
 		85018F9727D7AD130093C215 /* FirebaseAnalytics */ = {
@@ -922,22 +886,22 @@
 		};
 		85435DEC27CD0F3E00621380 /* Cucumberish */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish" */;
+			package = 85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish.git" */;
 			productName = Cucumberish;
 		};
 		85435DEE27CD0F4400621380 /* Cucumberish */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish" */;
+			package = 85435DE127CD088300621380 /* XCRemoteSwiftPackageReference "Cucumberish.git" */;
 			productName = Cucumberish;
 		};
 		854B333127C9195D00F61095 /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 854B333027C9195D00F61095 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 854B333027C9195D00F61095 /* XCRemoteSwiftPackageReference "RxSwift.git" */;
 			productName = RxBlocking;
 		};
 		854B333327C9195D00F61095 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 854B333027C9195D00F61095 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 854B333027C9195D00F61095 /* XCRemoteSwiftPackageReference "RxSwift.git" */;
 			productName = RxSwift;
 		};
 		8564484F27CD70D8005D8102 /* UICore */ = {
