@@ -13,7 +13,8 @@ class HeroStore {
 
     static func reducer(action: Action, state: HeroState?) -> HeroState {
         return HeroState(
-            heroListState: HeroListReducer.reducer(action, state: state?.heroListState)
+            heroListState: HeroListReducer.reducer(action, state: state?.heroListState),
+            heroDetailState: HeroDetailReducer.reducer(action, state: state?.heroDetailState)
         )
     }
 }

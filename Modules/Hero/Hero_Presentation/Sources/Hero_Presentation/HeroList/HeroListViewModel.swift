@@ -7,8 +7,7 @@ import ReSwift
 
 class HeroListViewModel: ObservableObject, GetHeroesOutput, StoreSubscriber {
 
-    private var disposeBag = DisposeBag()
-
+//    private var disposeBag = DisposeBag()
     @Published var state: HeroListState = HeroListState()
 
     init() {

@@ -6,12 +6,17 @@ import SwiftUI
 struct HeroListView: View {
 
     @ObservedObject var viewModel: HeroListViewModel
+
     let getHeroesUseCase: GetHeroesUseCase
-    
+    let detailView: HeroDetailView
+
     @State private var showingConfirmation = true
 
-    init(viewModel: HeroListViewModel, getHeroesUseCase: GetHeroesUseCase) {
+    init(viewModel: HeroListViewModel,
+         detailView: HeroDetailView,
+         getHeroesUseCase: GetHeroesUseCase) {
         self.viewModel = viewModel
+        self.detailView = detailView
         self.getHeroesUseCase = getHeroesUseCase
         
         HeroStore.shared.dispatch(
@@ -24,8 +29,12 @@ struct HeroListView: View {
         if viewModel.state.progressBar == .loading {
             ActivityIndicator()
         } else {
-            List(viewModel.state.heroes) { hero in
-                HeroRow(hero: hero)
+            NavigationView {
+                List(viewModel.state.heroes) { hero in
+                    NavigationLink(destination: detailView) {
+                        HeroRow(hero: hero)
+                    }.navigationViewStyle(StackNavigationViewStyle())
+                }.navigationBarTitle("List of Heroes")
             }
             Button("Reload again", role: .none) {
                 HeroStore.shared.dispatch(
