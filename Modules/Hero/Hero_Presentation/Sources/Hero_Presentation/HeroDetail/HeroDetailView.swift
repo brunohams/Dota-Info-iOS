@@ -5,14 +5,16 @@ import SwiftUI
 
 struct HeroDetailView: View {
 
-    @ObservedObject var viewModel: HeroDetailViewModel
-    private let controller: HeroDetailController
+    @Injected(\.heroDetailController) private var controller: HeroDetailController
+    @ObservedObject private var viewModel: HeroDetailViewModel
 
+    private let heroId: Int
     @State private var showingConfirmation = true
 
-    init(viewModel: HeroDetailViewModel, controller: HeroDetailController) {
-        self.viewModel = viewModel
-        self.controller = controller
+    init(heroId: Int) {
+        @Injected(\.heroDetailViewModel) var _injectedViewModel: HeroDetailViewModel
+        self.viewModel = _injectedViewModel
+        self.heroId = heroId
     }
 
     var body: some View {
@@ -40,7 +42,7 @@ struct HeroDetailView: View {
                         }
             }
         }.onAppear {
-            controller.on(.loadHero(id: 3))
+            controller.on(.loadHero(id: heroId))
         }
 
     }

@@ -10,25 +10,33 @@ class HeroDetailViewModel: ObservableObject, GetHeroOutput {
     @Published var state: HeroDetailState = HeroDetailState()
 
     func didReceive(hero: Hero) {
-        state.heroName = hero.localizedName
-        state.heroId = String(hero.id)
-        state.heroImg = hero.img
-        state = state
+        DispatchQueue.main.async {
+            self.state.heroName = hero.localizedName
+            self.state.heroId = String(hero.id)
+            self.state.heroImg = hero.img
+            self.state = self.state
+        }
     }
 
     func didReceive(error: ErrorDetail) {
-        state.dialog = UIComponent.Dialog(title: error.title, description: error.description)
-        state = state
+        DispatchQueue.main.async {
+            self.state.dialog = UIComponent.Dialog(title: error.title, description: error.description)
+            self.state = self.state
+        }
     }
 
     func didReceive(progress: ProgressState) {
-        state.progressBar = progress
-        state = state
+        DispatchQueue.main.async {
+            self.state.progressBar = progress
+            self.state = self.state
+        }
     }
 
     func didNotFoundHero(withId: Int) {
-        state.dialog = UIComponent.Dialog(title: "Hero not Found", description: "Hero with id \(withId) was not found")
-        state = state
+        DispatchQueue.main.async {
+            self.state.dialog = UIComponent.Dialog(title: "Hero not Found", description: "Hero with id \(withId) was not found")
+            self.state = self.state
+        }
     }
 
     func dismissDialog() {

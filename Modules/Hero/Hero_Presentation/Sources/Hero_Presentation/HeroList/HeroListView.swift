@@ -6,50 +6,51 @@ import SwiftUI
 struct HeroListView: View {
 
     @ObservedObject var viewModel: HeroListViewModel
-    private let controller: HeroListController
-
-    let detailView: HeroDetailView
+    @Injected(\.heroListController) private var controller: HeroListController
 
     @State private var showingConfirmation = true
 
-    init(viewModel: HeroListViewModel, controller: HeroListController, detailView: HeroDetailView) {
-        self.viewModel = viewModel
-        self.controller = controller
-        self.detailView = detailView
-
-        controller.on(.requestHeroes)
+    init() {
+        @Injected(\.heroListViewModel) var _injectedViewModel: HeroListViewModel
+        self.viewModel = _injectedViewModel
     }
     
     var body: some View {
 
-        if viewModel.state.progressBar == .loading {
-            ActivityIndicator()
-        } else {
-            NavigationView {
-                List(viewModel.state.heroes) { hero in
-                    NavigationLink(destination: detailView) {
-                        HeroRow(hero: hero)
-                    }.navigationViewStyle(StackNavigationViewStyle())
-                }.navigationBarTitle("List of Heroes")
-            }
-            Button("Reload again", role: .none) {
-                controller.on(.reloadHeroes)
-            }
-            Button("Increase Quantity", role: .destructive) {
-                controller.on(.increaseQuantity)
-            }
-        }
+        VStack {
 
-        if let dialog = viewModel.state.dialog as? UIComponent.Dialog {
-            Text("")
-                .alert(dialog.title, isPresented: $showingConfirmation) {
-                    Button("Ok", role: .none) {
-                        controller.on(.dismissDialog)
-                        showingConfirmation = true
-                    }
-                } message: {
-                    Text(dialog.description)
+            if viewModel.state.progressBar == .loading {
+                ActivityIndicator()
+            } else {
+                NavigationView {
+                    List(viewModel.state.heroes) { hero in
+                        NavigationLink(destination: HeroDetailView(heroId: hero.id)) {
+                            HeroRow(hero: hero)
+                        }.navigationViewStyle(StackNavigationViewStyle())
+                    }.navigationBarTitle("List of Heroes")
                 }
+                Button("Reload again", role: .none) {
+                    controller.on(.reloadHeroes)
+                }
+                Button("Increase Quantity", role: .destructive) {
+                    controller.on(.increaseQuantity)
+                }
+            }
+
+            if let dialog = viewModel.state.dialog as? UIComponent.Dialog {
+                Text("")
+                        .alert(dialog.title, isPresented: $showingConfirmation) {
+                            Button("Ok", role: .none) {
+                                controller.on(.dismissDialog)
+                                showingConfirmation = true
+                            }
+                        } message: {
+                            Text(dialog.description)
+                        }
+            }
+
+        }.onAppear {
+            controller.on(.requestHeroes)
         }
 
     }
