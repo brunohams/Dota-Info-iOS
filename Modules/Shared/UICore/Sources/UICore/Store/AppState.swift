@@ -1,5 +1,5 @@
 import Foundation
 
 class AppState: ObservableObject {
-    var numberOfErrors: Int = 0
+    var numberOfActions: Int = 0
 }

@@ -34,18 +34,16 @@ class GetHeroesUseCase {
             observer.onCompleted()
 
             return Disposables.create()
-        }.observe(on: SerialDispatchQueueScheduler.init(qos: .background))
+        }
 
         output.didReceiveObservable(observable: observable)
     }
 
     private func createNetworkErrorDialog(for error: Error) -> UIComponent.Dialog {
-        
         return UIComponent.Dialog(
             title: "Erro de rede",
             description: error.localizedDescription
         )
-        
     }
 
 

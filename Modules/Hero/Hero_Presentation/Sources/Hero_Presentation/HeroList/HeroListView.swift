@@ -17,7 +17,7 @@ struct HeroListView: View {
         self.controller = controller
         self.detailView = detailView
 
-        controller.trigger(action: .requestHeroes)
+        controller.on(.requestHeroes)
     }
     
     var body: some View {
@@ -33,10 +33,10 @@ struct HeroListView: View {
                 }.navigationBarTitle("List of Heroes")
             }
             Button("Reload again", role: .none) {
-                controller.trigger(action: .reloadHeroes)
+                controller.on(.reloadHeroes)
             }
             Button("Increase Quantity", role: .destructive) {
-                controller.trigger(action: .increaseQuantity)
+                controller.on(.increaseQuantity)
             }
         }
 
@@ -44,7 +44,7 @@ struct HeroListView: View {
             Text("")
                 .alert(dialog.title, isPresented: $showingConfirmation) {
                     Button("Ok", role: .none) {
-                        controller.trigger(action: .dismissDialog)
+                        controller.on(.dismissDialog)
                         showingConfirmation = true
                     }
                 } message: {

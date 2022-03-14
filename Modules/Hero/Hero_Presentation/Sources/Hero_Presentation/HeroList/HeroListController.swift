@@ -12,24 +12,30 @@ class HeroListController {
         self.getHeroesUseCase = getHeroesUseCase
     }
 
-    func trigger(action: HeroListActions) {
+    func on(_ action: HeroListActions) {
         switch action {
         case .requestHeroes:
-            DispatchQueue.global(qos: .background).async( execute: {
-                AppStore.shared.dispatch(IncreaseErrorQuantityAction())
-                self.getHeroesUseCase.execute()
-            })
+            requestHeroes()
         case .reloadHeroes:
-            DispatchQueue.global(qos: .background).async( execute: {
-                self.getHeroesUseCase.execute()
-            })
+            reloadHeroes()
         case .dismissDialog:
             viewModel.dismissDialog()
         case .increaseQuantity:
-            AppStore.shared.dispatch(
-                IncreaseErrorQuantityAction()
-            )
+            AppStore.shared.dispatch(IncreaseErrorQuantityAction())
         }
+    }
+
+    private func requestHeroes() {
+        AppStore.shared.dispatch(IncreaseErrorQuantityAction())
+        DispatchQueue.global(qos: .background).async( execute: {
+            self.getHeroesUseCase.execute()
+        })
+    }
+
+    private func reloadHeroes() {
+        DispatchQueue.global(qos: .background).async( execute: {
+            self.getHeroesUseCase.execute()
+        })
     }
 
 }

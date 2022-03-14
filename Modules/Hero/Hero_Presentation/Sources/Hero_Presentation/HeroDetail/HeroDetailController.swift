@@ -12,7 +12,7 @@ class HeroDetailController {
         self.getHeroUseCase = getHeroUseCase
     }
 
-    func trigger(action: HeroDetailActions) {
+    func on(_ action: HeroDetailActions) {
         switch action {
         case .loadHero(id: let id):
             DispatchQueue.global(qos: .background).async(execute: {

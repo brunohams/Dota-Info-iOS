@@ -10,8 +10,7 @@ struct HeroDetailView: View {
 
     @State private var showingConfirmation = true
 
-    init(viewModel: HeroDetailViewModel,
-         controller: HeroDetailController) {
+    init(viewModel: HeroDetailViewModel, controller: HeroDetailController) {
         self.viewModel = viewModel
         self.controller = controller
     }
@@ -33,7 +32,7 @@ struct HeroDetailView: View {
                 Text("")
                         .alert(dialog.title, isPresented: $showingConfirmation) {
                             Button("Ok", role: .none) {
-                                controller.trigger(action: .dismissDialog)
+                                controller.on(.dismissDialog)
                                 showingConfirmation = true
                             }
                         } message: {
@@ -41,7 +40,7 @@ struct HeroDetailView: View {
                         }
             }
         }.onAppear {
-            controller.trigger(action: .loadHero(id: 3))
+            controller.on(.loadHero(id: 3))
         }
 
     }

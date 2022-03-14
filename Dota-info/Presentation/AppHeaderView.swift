@@ -9,7 +9,7 @@ struct AppHeaderView: View {
 
     var body: some View {
 
-        Text("Total of Actions: \(viewModel.state.numberOfErrors)")
+        Text("Total of Actions: \(viewModel.state.numberOfActions)")
 
     }
 }

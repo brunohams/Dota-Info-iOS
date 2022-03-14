@@ -7,7 +7,7 @@ class AppReducer {
 
         switch action {
         case is IncreaseErrorQuantityAction:
-            state.numberOfErrors += 1
+            state.numberOfActions += 1
         default:
             break
         }
