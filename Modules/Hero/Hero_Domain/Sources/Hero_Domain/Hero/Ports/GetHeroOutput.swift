@@ -4,7 +4,7 @@ import RxSwift
 
 protocol GetHeroOutput {
     func didReceive(hero: Hero)
-    func didNotFoundHero(heroId: Int)
+    func didNotFoundHero(withId: Int)
     func didReceive(error: ErrorDetail)
     func didReceive(progress: ProgressState)
 }

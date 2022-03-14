@@ -26,8 +26,8 @@ class HeroDetailViewModel: ObservableObject, GetHeroOutput {
         state = state
     }
 
-    func didNotFoundHero(heroId: Int) {
-        state.dialog = UIComponent.Dialog(title: "Hero not Found", description: "Hero with id \(heroId) was not found")
+    func didNotFoundHero(withId: Int) {
+        state.dialog = UIComponent.Dialog(title: "Hero not Found", description: "Hero with id \(withId) was not found")
         state = state
     }
 

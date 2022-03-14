@@ -8,18 +8,19 @@ import ReSwift
 class HeroListViewModel: ObservableObject, GetHeroesOutput {
 
     @Published var state: HeroListState = HeroListState()
+    private let disposeBag = DisposeBag()
 
-    func didReceive(heroes: [Hero]) {
+    func show(heroes: [Hero]) {
         state.heroes = heroes
         state = state
     }
 
-    func didReceive(error: ErrorDetail) {
+    func show(error: ErrorDetail) {
         state.dialog = UIComponent.Dialog(title: error.title, description: error.description)
         state = state
     }
 
-    func didReceive(progress: ProgressState) {
+    func show(progress: ProgressState) {
         state.progressBar = progress
         state = state
     }
@@ -29,22 +30,20 @@ class HeroListViewModel: ObservableObject, GetHeroesOutput {
         state = state
     }
 
-//    func didReceiveObservable(observable: Observable<DataState<[Hero]>>) {
-//        observable
-//            .observe(on: MainScheduler.instance)
-//            .subscribe(onNext: { state in
-//                switch (state) {
-//                    case .error(let uiComponent):
-//                        store.dispatch(ReceiveErrorAction(uiComponent: uiComponent))
-//                    case .success(let heroes):
-//                        if let heroes = heroes {
-//                            store.dispatch(ReceiveHeroesAction(heroes: heroes))
-//                        }
-//                    case .progress(let progress):
-//                        store.dispatch(ReceiveProgressAction(progress: progress))
-//                }
-//
-//            }).disposed(by: disposeBag)
-//    }
+    func didReceiveObservable(observable: Observable<DataState<[Hero]>>) {
+        observable
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { state in
+                switch (state) {
+                    case .error(let error):
+                        self.show(error: error)
+                    case .success(let heroes):
+                        self.show(heroes: heroes)
+                    case .progress(let progress):
+                        self.show(progress: progress)
+                }
+
+            }).disposed(by: disposeBag)
+    }
 
 }

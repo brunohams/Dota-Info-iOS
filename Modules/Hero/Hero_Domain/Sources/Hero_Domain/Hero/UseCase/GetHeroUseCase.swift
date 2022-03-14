@@ -17,7 +17,7 @@ class GetHeroUseCase {
     func execute(heroId: Int) {
 
         output.didReceive(progress: .loading)
-        sleep(2)
+        sleep(1)
 
         do {
             let hero: Hero? = try heroService.getHeroStats().filter { hero in hero.id == heroId }.first
@@ -25,7 +25,7 @@ class GetHeroUseCase {
             if let hero = hero {
                 output.didReceive(hero: hero)
             } else {
-                output.didNotFoundHero(heroId: heroId)
+                output.didNotFoundHero(withId: heroId)
             }
         } catch {
             logger.log(message: error.localizedDescription)
