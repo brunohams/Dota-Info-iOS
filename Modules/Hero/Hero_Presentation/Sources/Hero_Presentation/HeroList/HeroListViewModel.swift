@@ -10,6 +10,22 @@ class HeroListViewModel: ObservableObject, GetHeroesOutput {
     @Published var state: HeroListState = HeroListState()
     private let disposeBag = DisposeBag()
 
+    func didReceiveObservable(observable: Observable<DataState<[Hero]>>) {
+        observable
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { state in
+                switch (state) {
+                    case .error(let error):
+                        self.show(error: error)
+                    case .success(let heroes):
+                        self.show(heroes: heroes)
+                    case .progress(let progress):
+                        self.show(progress: progress)
+                }
+
+            }).disposed(by: disposeBag)
+    }
+
     func show(heroes: [Hero]) {
         state.heroes = heroes
         state = state
@@ -28,22 +44,6 @@ class HeroListViewModel: ObservableObject, GetHeroesOutput {
     func dismissDialog() {
         state.dialog = UIComponent.None(message: "")
         state = state
-    }
-
-    func didReceiveObservable(observable: Observable<DataState<[Hero]>>) {
-        observable
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { state in
-                switch (state) {
-                    case .error(let error):
-                        self.show(error: error)
-                    case .success(let heroes):
-                        self.show(heroes: heroes)
-                    case .progress(let progress):
-                        self.show(progress: progress)
-                }
-
-            }).disposed(by: disposeBag)
     }
 
 }

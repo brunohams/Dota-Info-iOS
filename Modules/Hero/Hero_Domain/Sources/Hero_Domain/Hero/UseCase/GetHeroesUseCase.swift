@@ -19,7 +19,6 @@ class GetHeroesUseCase {
         let observable = Observable<DataState<[Hero]>>.create { [self] observer in
             observer.onNext(DataState<[Hero]>.progress(.loading))
 
-            sleep(1)
             do {
                 let heroes: [Hero] = try heroService.getHeroStats()
                 observer.onNext(DataState<[Hero]>.success(heroes))

@@ -1,6 +1,7 @@
 import Foundation
 @testable import Hero_Domain
 @testable import UICore
+@testable import Common
 
 class HeroListController {
 

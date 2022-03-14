@@ -17,7 +17,6 @@ class GetHeroUseCase {
     func execute(heroId: Int) {
 
         output.didReceive(progress: .loading)
-        sleep(1)
 
         do {
             let hero: Hero? = try heroService.getHeroStats().filter { hero in hero.id == heroId }.first
