@@ -5,33 +5,34 @@ import ReSwift
 @testable import Hero_Domain
 @testable import UICore
 
-class HeroDetailViewModel: ObservableObject, GetHeroOutput, StoreSubscriber {
+class HeroDetailViewModel: ObservableObject, GetHeroOutput {
 
     @Published var state: HeroDetailState = HeroDetailState()
 
-    init() {
-        HeroStore.shared.subscribe(self)
-    }
-
-    func newState(state: HeroState) {
-        self.state = state.heroDetailState
-    }
-
     func didReceive(hero: Hero) {
-        HeroStore.shared.dispatch(
-            ReceiveHeroAction(hero: hero)
-        )
+        state.heroName = hero.localizedName
+        state.heroId = String(hero.id)
+        state.heroImg = hero.img
+        state = state
     }
 
     func didReceive(error: ErrorDetail) {
-        HeroStore.shared.dispatch(
-            ReceiveErrorAction(error: error)
-        )
+        state.dialog = UIComponent.Dialog(title: error.title, description: error.description)
+        state = state
     }
 
     func didReceive(progress: ProgressState) {
-//        HeroStore.shared.dispatch(
-//            ReceiveProgressAction(progress: progress)
-//        )
+        state.progressBar = progress
+        state = state
+    }
+
+    func didNotFoundHero(heroId: Int) {
+        state.dialog = UIComponent.Dialog(title: "Hero not Found", description: "Hero with id \(heroId) was not found")
+        state = state
+    }
+
+    func dismissDialog() {
+        state.dialog = UIComponent.None(message: "")
+        state = state
     }
 }

@@ -14,14 +14,19 @@ class GetHeroUseCase {
         self.output = output
     }
 
-    func execute() {
+    func execute(heroId: Int) {
 
         output.didReceive(progress: .loading)
         sleep(2)
 
         do {
-            let hero: Hero = try heroService.getHeroStats()[0]
-            output.didReceive(hero: hero)
+            let hero: Hero? = try heroService.getHeroStats().filter { hero in hero.id == heroId }.first
+
+            if let hero = hero {
+                output.didReceive(hero: hero)
+            } else {
+                output.didNotFoundHero(heroId: heroId)
+            }
         } catch {
             logger.log(message: error.localizedDescription)
             let error = ErrorDetail(title: "Erro ao retornar detalhes de heroi", description: error.localizedDescription)

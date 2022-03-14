@@ -6,22 +6,18 @@ import SwiftUI
 struct HeroListView: View {
 
     @ObservedObject var viewModel: HeroListViewModel
+    private let controller: HeroListController
 
-    let getHeroesUseCase: GetHeroesUseCase
     let detailView: HeroDetailView
 
     @State private var showingConfirmation = true
 
-    init(viewModel: HeroListViewModel,
-         detailView: HeroDetailView,
-         getHeroesUseCase: GetHeroesUseCase) {
+    init(viewModel: HeroListViewModel, controller: HeroListController, detailView: HeroDetailView) {
         self.viewModel = viewModel
+        self.controller = controller
         self.detailView = detailView
-        self.getHeroesUseCase = getHeroesUseCase
-        
-        HeroStore.shared.dispatch(
-            RequestHeroesAction(useCase: getHeroesUseCase)
-        )
+
+        controller.trigger(action: .requestHeroes)
     }
     
     var body: some View {
@@ -37,17 +33,10 @@ struct HeroListView: View {
                 }.navigationBarTitle("List of Heroes")
             }
             Button("Reload again", role: .none) {
-                HeroStore.shared.dispatch(
-                    RequestHeroesAction(useCase: getHeroesUseCase)
-                )
+                controller.trigger(action: .reloadHeroes)
             }
-            Button("Throw dummy error", role: .destructive) {
-                HeroStore.shared.dispatch(
-                    ThrowDummyErrorAction()
-                )
-                AppStore.shared.dispatch(
-                    IncreaseErrorQuantityAction()
-                )
+            Button("Increase Quantity", role: .destructive) {
+                controller.trigger(action: .increaseQuantity)
             }
         }
 
@@ -55,9 +44,7 @@ struct HeroListView: View {
             Text("")
                 .alert(dialog.title, isPresented: $showingConfirmation) {
                     Button("Ok", role: .none) {
-                        HeroStore.shared.dispatch(
-                            DismissDialogAction()
-                        )
+                        controller.trigger(action: .dismissDialog)
                         showingConfirmation = true
                     }
                 } message: {
@@ -66,4 +53,5 @@ struct HeroListView: View {
         }
 
     }
+
 }

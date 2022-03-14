@@ -6,15 +6,14 @@ import SwiftUI
 struct HeroDetailView: View {
 
     @ObservedObject var viewModel: HeroDetailViewModel
-    let getHeroUseCase: GetHeroUseCase
+    private let controller: HeroDetailController
 
     @State private var showingConfirmation = true
 
-    init(viewModel: HeroDetailViewModel, getHeroUseCase: GetHeroUseCase) {
+    init(viewModel: HeroDetailViewModel,
+         controller: HeroDetailController) {
         self.viewModel = viewModel
-        self.getHeroUseCase = getHeroUseCase
-
-
+        self.controller = controller
     }
 
     var body: some View {
@@ -34,9 +33,7 @@ struct HeroDetailView: View {
                 Text("")
                         .alert(dialog.title, isPresented: $showingConfirmation) {
                             Button("Ok", role: .none) {
-                                HeroStore.shared.dispatch(
-                                        DismissDialogAction()
-                                )
+                                controller.trigger(action: .dismissDialog)
                                 showingConfirmation = true
                             }
                         } message: {
@@ -44,9 +41,7 @@ struct HeroDetailView: View {
                         }
             }
         }.onAppear {
-            DispatchQueue.global(qos: .background).async( execute: {
-                getHeroUseCase.execute()
-            })
+            controller.trigger(action: .loadHero(id: 3))
         }
 
     }

@@ -5,29 +5,28 @@ import ReSwift
 @testable import Hero_Domain
 @testable import UICore
 
-class HeroListViewModel: ObservableObject, GetHeroesOutput, StoreSubscriber {
+class HeroListViewModel: ObservableObject, GetHeroesOutput {
 
-//    private var disposeBag = DisposeBag()
     @Published var state: HeroListState = HeroListState()
 
-    init() {
-        HeroStore.shared.subscribe(self)
-    }
-    
-    func newState(state: HeroState) {
-        self.state = state.heroListState
-    }
-
     func didReceive(heroes: [Hero]) {
-        HeroStore.shared.dispatch(ReceiveHeroesAction(heroes: heroes))
+        state.heroes = heroes
+        state = state
     }
 
     func didReceive(error: ErrorDetail) {
-        HeroStore.shared.dispatch(ReceiveErrorAction(error: error))
+        state.dialog = UIComponent.Dialog(title: error.title, description: error.description)
+        state = state
     }
 
     func didReceive(progress: ProgressState) {
-        HeroStore.shared.dispatch(ReceiveProgressAction(progress: progress))
+        state.progressBar = progress
+        state = state
+    }
+
+    func dismissDialog() {
+        state.dialog = UIComponent.None(message: "")
+        state = state
     }
 
 //    func didReceiveObservable(observable: Observable<DataState<[Hero]>>) {
@@ -47,6 +46,5 @@ class HeroListViewModel: ObservableObject, GetHeroesOutput, StoreSubscriber {
 //
 //            }).disposed(by: disposeBag)
 //    }
-
 
 }

@@ -7,10 +7,7 @@ struct HeroDetailViewKey: InjectionKey {
     typealias Value = HeroDetailView
     static var currentValue: HeroDetailView = HeroDetailView(
             viewModel: HeroDetailViewModelKey.currentValue,
-            getHeroUseCase: GetHeroUseCase(
-                    heroService: HeroServiceKey.currentValue,
-                    loggerFactory: LoggerFactoryKey.currentValue,
-                    output: HeroDetailViewModelKey.currentValue)
+            controller: HeroDetailControllerKey.currentValue
     )
 }
 
