@@ -28,15 +28,11 @@ class HeroListController {
 
     private func requestHeroes() {
         AppStore.shared.dispatch(IncreaseErrorQuantityAction())
-        DispatchQueue.global(qos: .background).async( execute: {
-            self.getHeroesUseCase.execute()
-        })
+        getHeroesUseCase.execute()
     }
 
     private func reloadHeroes() {
-        DispatchQueue.global(qos: .background).async( execute: {
-            self.getHeroesUseCase.execute()
-        })
+        getHeroesUseCase.execute()
     }
 
 }

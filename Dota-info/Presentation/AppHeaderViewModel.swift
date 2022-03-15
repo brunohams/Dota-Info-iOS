@@ -14,7 +14,9 @@ class AppHeaderViewModel: ObservableObject, StoreSubscriber {
     }
 
     func newState(state: AppState) {
-        self.state = state
+        DispatchQueue.main.async {
+            self.state = state
+        }
     }
 
 

@@ -30,10 +30,14 @@ struct HeroListView: View {
                     }.navigationBarTitle("List of Heroes")
                 }
                 Button("Reload again", role: .none) {
-                    controller.on(.reloadHeroes)
+                    Task.detached {
+                        await controller.on(.reloadHeroes)
+                    }
                 }
                 Button("Increase Quantity", role: .destructive) {
-                    controller.on(.increaseQuantity)
+                    Task.detached {
+                        await controller.on(.increaseQuantity)
+                    }
                 }
             }
 
@@ -41,7 +45,9 @@ struct HeroListView: View {
                 Text("")
                         .alert(dialog.title, isPresented: $showingConfirmation) {
                             Button("Ok", role: .none) {
-                                controller.on(.dismissDialog)
+                                Task.detached {
+                                    await controller.on(.dismissDialog)
+                                }
                                 showingConfirmation = true
                             }
                         } message: {
@@ -50,7 +56,9 @@ struct HeroListView: View {
             }
 
         }.onAppear {
-            controller.on(.requestHeroes)
+            Task.detached {
+                await controller.on(.requestHeroes)
+            }
         }
 
     }
