@@ -14,17 +14,16 @@ class GetHeroUseCase {
         self.output = output
     }
 
-    func execute(heroId: Int) {
-
+    func execute(input: GetHeroInput) {
         output.didReceive(progress: .loading)
 
         do {
-            let hero: Hero? = try heroService.getHeroStats().filter { hero in hero.id == heroId }.first
+            let hero: Hero? = try heroService.getHeroStats().filter { hero in hero.id == input.heroId }.first
 
             if let hero = hero {
                 output.didReceive(hero: hero)
             } else {
-                output.didNotFoundHero(withId: heroId)
+                output.didNotFoundHero(withId: input.heroId)
             }
         } catch {
             logger.log(message: error.localizedDescription)

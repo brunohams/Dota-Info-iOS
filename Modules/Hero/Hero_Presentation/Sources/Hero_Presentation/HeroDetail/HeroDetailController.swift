@@ -15,19 +15,19 @@ class HeroDetailController {
     func on(_ action: HeroDetailActions) {
         switch action {
         case .loadHero(id: let id):
-            DispatchQueue.global(qos: .background).async(execute: {
-                AppStore.shared.dispatch(IncreaseErrorQuantityAction())
-                self.getHeroUseCase.execute(heroId: id)
-            })
-
+            loadHero(id)
         case .dismissDialog:
             viewModel.dismissDialog()
-
         case .increaseQuantity:
-            AppStore.shared.dispatch(
-                    IncreaseErrorQuantityAction()
-            )
+            AppStore.shared.dispatch(IncreaseErrorQuantityAction())
         }
+    }
+
+    private func loadHero(_ id: Int) {
+        AppStore.shared.dispatch(IncreaseErrorQuantityAction())
+
+        let input = GetHeroInput(heroId: id)
+        getHeroUseCase.execute(input: input)
     }
 
 }

@@ -42,7 +42,9 @@ struct HeroDetailView: View {
                         }
             }
         }.onAppear {
-            controller.on(.loadHero(id: heroId))
+            Task.detached {
+                await controller.on(.loadHero(id: heroId))
+            }
         }
 
     }
