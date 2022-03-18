@@ -36,7 +36,6 @@
 		BE6AA2902690B6AB7E1406FF /* Dota_infoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */; };
 		BE6AA54A144BF26623880D03 /* AppHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA3B221BF7F9EA8802B71 /* AppHeaderViewModel.swift */; };
 		BE6AA89697106000ED61693D /* AppHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AACF0A2F28730EE56F0E4 /* AppHeaderView.swift */; };
-		BE6AAB71690B21BD1ABD5230 /* SeeDetailsOfAHeroSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AA380DA4C5307A7694370 /* SeeDetailsOfAHeroSteps.swift */; };
 		BE6AADDFC93479F222CAD8EF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BE6AA2968041C6B18F2E64F9 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +79,6 @@
 		85B98DBA27CD72F8005FB855 /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Common; sourceTree = "<group>"; };
 		85F5A16927CD2CCE004639E0 /* BaseSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSteps.swift; sourceTree = "<group>"; };
 		BE6AA2968041C6B18F2E64F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.me; path = README.md; sourceTree = "<group>"; };
-		BE6AA380DA4C5307A7694370 /* SeeDetailsOfAHeroSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeDetailsOfAHeroSteps.swift; sourceTree = "<group>"; };
 		BE6AA3B221BF7F9EA8802B71 /* AppHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHeaderViewModel.swift; sourceTree = "<group>"; };
 		BE6AAA37E5F7375FA77064E3 /* Dota_infoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dota_infoApp.swift; sourceTree = "<group>"; };
 		BE6AACF0A2F28730EE56F0E4 /* AppHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHeaderView.swift; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				85435DF427CD153500621380 /* FetchHeroesSteps.swift */,
-				BE6AA380DA4C5307A7694370 /* SeeDetailsOfAHeroSteps.swift */,
 			);
 			path = Hero;
 			sourceTree = "<group>";
@@ -466,7 +463,6 @@
 				85435DF527CD153500621380 /* FetchHeroesSteps.swift in Sources */,
 				85435DFE27CD28EE00621380 /* CucumberishLoader.m in Sources */,
 				85F5A16A27CD2CCE004639E0 /* BaseSteps.swift in Sources */,
-				BE6AAB71690B21BD1ABD5230 /* SeeDetailsOfAHeroSteps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
